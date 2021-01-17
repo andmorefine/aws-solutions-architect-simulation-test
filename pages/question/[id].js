@@ -85,7 +85,6 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {  
   const question = contents.filter((value) => (value.id == params.id))
-  console.log(question)
   return { props: { question } }
 }
 
