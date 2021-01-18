@@ -54,14 +54,14 @@ const QuestionDetail = ({ question, answerOptions }) => {
       <p>{question.question_text}</p>
       {answerOptions.map((answer) => (
         <div className="form-check" key={answer.option_id}>
-          <input className="form-check-input" type="radio" name={`radio${answer.question_id}`} value={answer.option_id} id={`flexRadio${answer.option_id}`} onChange={handleChange} />
-          <label className="form-check-label" htmlFor={`flexRadio${answer.option_id}`}>
+          <input className="form-check-input" type='radio' name={`${question.type}${answer.question_id}`} value={answer.option_id} id={`flex${answer.option_id}`} onChange={handleChange} />
+          <label className="form-check-label" htmlFor={`flex${answer.option_id}`}>
             {answer.answer_text}
           </label>
         </div>
       ))}
       {answer.message ? (<>
-        <div className={answer.correct ? "p-3 m-2 bg-info" : "p-3 m-2 bg-danger text-white"}>
+        <div className={'p-3 m-2 message ' + (answer.correct ? "bg-info" : "bg-danger text-white")}>
           <h5>{answerText()}</h5>
           {answer.message}
         </div>
