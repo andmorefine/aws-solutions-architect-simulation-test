@@ -7,7 +7,7 @@ export default function Home() {
     <Layout>
       <main className={styles.main}>
         <h1 className={styles.title}>
-          <Link href="/question">
+          <Link href="/simulation_test_1">
             <a>模擬試験</a>
           </Link>
         </h1>

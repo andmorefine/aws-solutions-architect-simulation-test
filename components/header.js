@@ -11,8 +11,8 @@ const Header = () => (
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto mb-2 mb-lg-0">
-              <li className="nav-item"><Link href="/"><a className="nav-link">Home</a></Link></li>
-              <li className="nav-item"><Link href="/question"><a className="nav-link">模擬試験</a></Link></li>
+              <li className="nav-item"><Link href="/"><a className="nav-link">練習問題</a></Link></li>
+              <li className="nav-item"><Link href="/simulation_test_1"><a className="nav-link">模擬試験1</a></Link></li>
             </ul>
           </div>
         </div>

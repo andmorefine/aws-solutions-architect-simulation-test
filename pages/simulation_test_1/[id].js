@@ -3,10 +3,9 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
 import Layout from '../../components/layout'
-import contents from '../../contents/question_index.json'
+import contents from '../../contents/simulation_test_1.json'
 
-const QuestionDetail = ({ question }) => {
-  const detail = question[0]
+const QuestionDetail = ({ question, answerOptions }) => {
   const router = useRouter()
 
   const state = {
@@ -25,12 +24,13 @@ const QuestionDetail = ({ question }) => {
   }
 
   const answerCheck = () => {
-    const content = detail.answer_list.filter((value) => (value.id == answer.answer))
-    
+    const content = answerOptions.find((value) => (value.option_id == answer.answer))
+    if (!content) return false
+
     setAnswer({
       ...answer,
-      correct: content[0].correct,
-      message: content[0].message
+      correct: content.correct,
+      message: content.message,
     })
   }
 
@@ -45,17 +45,17 @@ const QuestionDetail = ({ question }) => {
       correct: false,
       message: '',
     })
-    router.push(`/question/${detail.id + 1}`)
+    router.push(`/simulation_test_1/${question.id + 1}`)
   }
 
   return (
-    <Layout title={detail ? `問題${detail.id}` : ''}>
-      <h1>問題{detail.id}</h1>
-      <p>{detail.question_text}</p>
-      {detail.answer_list.map((answer) => (
-        <div className="form-check" key={answer.id}>
-          <input className="form-check-input" type="radio" name="radio" value={answer.id} id={`flexRadio${answer.id}`} onChange={handleChange} />
-          <label className="form-check-label" htmlFor={`flexRadio${answer.id}`}>
+    <Layout title={question ? `問題${question.id}` : ''}>
+      <h1>問題{question.id}</h1>
+      <p>{question.question_text}</p>
+      {answerOptions.map((answer) => (
+        <div className="form-check" key={answer.option_id}>
+          <input className="form-check-input" type="radio" name={`radio${answer.question_id}`} value={answer.option_id} id={`flexRadio${answer.option_id}`} onChange={handleChange} />
+          <label className="form-check-label" htmlFor={`flexRadio${answer.option_id}`}>
             {answer.answer_text}
           </label>
         </div>
@@ -77,15 +77,17 @@ const QuestionDetail = ({ question }) => {
 }
 
 export const getStaticPaths = async () => {
-  const paths = contents.map((value) => ({
+  const paths = contents.question.map((value) => ({
     params: { id: value.id.toString() },
   }))
   return { paths, fallback: false }
 }
 
 export const getStaticProps = async ({ params }) => {  
-  const question = contents.filter((value) => (value.id == params.id))
-  return { props: { question } }
+  const question = contents.question.find((value) => (value.id == params.id))
+  const question_id = question.id
+  const answerOptions = contents.answer_options.filter((value) => (value.question_id == question_id))
+  return { props: { question, answerOptions } }
 }
 
 export default QuestionDetail
