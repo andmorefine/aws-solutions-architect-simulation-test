@@ -1,0 +1,76 @@
+{
+  "practice": [
+    {
+      "id": 1,
+      "name": "IAM",
+      "dirname": "iam",
+      "quiz": true
+    },
+    {
+      "id": 2,
+      "name": "VPC",
+      "dirname": "vpc",
+      "quiz": true
+    },
+    {
+      "id": 3,
+      "name": "EC2",
+      "dirname": "ec2",
+      "quiz": true
+    },
+    {
+      "id": 4,
+      "name": "S3",
+      "dirname": "s3",
+      "quiz": true
+    },
+    {
+      "id": 5,
+      "name": "Well Architected Framework",
+      "dirname": "wellarchitected",
+      "quiz": true
+    },
+    {
+      "id": 6,
+      "name": "信頼性の設計",
+      "dirname": "reliability",
+      "quiz": true
+    },
+    {
+      "id": 7,
+      "name": "Route53",
+      "dirname": "route53",
+      "quiz": true
+    },
+    {
+      "id": 8,
+      "name": "データベース",
+      "dirname": "rds",
+      "quiz": true
+    },
+    {
+      "id": 9,
+      "name": "キャッシュの活用",
+      "dirname": "cache",
+      "quiz": true
+    },
+    {
+      "id": 10,
+      "name": "サーバレス",
+      "dirname": "serverless",
+      "quiz": true
+    },
+    {
+      "id": 11,
+      "name": "環境の自動化",
+      "dirname": "automating",
+      "quiz": true
+    },
+    {
+      "id": 12,
+      "name": "セキュリティと運用",
+      "dirname": "security",
+      "quiz": true
+    }
+  ]
+}
