@@ -1,0 +1,10 @@
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  line-height: 1.2;
+}
+.form-check-label {
+  cursor: pointer;
+  &:hover {
+    background: #f0eeef;
+  }
+}
