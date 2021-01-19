@@ -81,8 +81,8 @@ const QuestionDetail = ({ question, answerOptions }) => {
   }
 
   return (
-    <Layout title={question ? `問題${question.id}` : ''}>
-      <h1>問題{question.id}</h1>
+    <Layout title={question ? `問題:${question.id}` : ''}>
+      <h1 className="h1">問題:{question.id}</h1>
       <p>{question.question_text}</p>
       {answerOptions.map((answer) => (
         <div className="form-check py-1" key={answer.option_id}>
