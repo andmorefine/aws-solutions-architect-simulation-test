@@ -1,9 +1,23 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 import Layout from '../../components/layout'
 import contents from '../../contents/section.json'
-import { Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap'
+import { reactLocalStorage } from 'reactjs-localstorage'
 
 const SectionDetail = ({ section, question }) => {
+  // router
+  const router = useRouter()
+  const testStart = () => {
+    const storageName = `test_${section.dirname}`
+    reactLocalStorage.remove(storageName)
+    const storageObject = question.map(valule => ({
+      "page": valule.page,
+      "answer": false,
+    }))
+    reactLocalStorage.setObject(storageName, storageObject)
+    router.push(`/section/${section.dirname}/1`)
+  }
 
   return (
     <Layout title={section ? `${section.name}` : ''}>
@@ -11,11 +25,9 @@ const SectionDetail = ({ section, question }) => {
       <h6 className="h6">問題の数: {question.length}</h6>
       <p className="text-center">{section.name}に関する理解をアソシエイト試験形式のテストで確認します。<br />ただし、理解促進と慣れを目的としており、本番試験よりも基本的な内容の問題となります。</p>
       <div className="text-center">
-        <Link href={`/section/${section.dirname}/1`}>
-          <Button variant="primary">
-            小テストを開始する
-          </Button>
-        </Link>
+        <Button variant="primary" onClick={testStart}>
+          小テストを開始する
+        </Button>
       </div>
     </Layout>
   )

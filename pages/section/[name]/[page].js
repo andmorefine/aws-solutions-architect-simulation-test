@@ -3,6 +3,7 @@ import { useRouter } from 'next/router'
 import Layout from '../../../components/layout'
 import contents from '../../../contents/section.json'
 import { Button, Modal } from 'react-bootstrap'
+import { reactLocalStorage } from 'reactjs-localstorage'
 
 const PageDetail = ({ section, question, questionSize, answerOptions }) => {
   // router
@@ -75,13 +76,27 @@ const PageDetail = ({ section, question, questionSize, answerOptions }) => {
     answerCheck()
   }
 
-  const nextLink = () => {
+  const setStorage = () => {
+    const content = answerOptions.find((value) => (value.option_id == answer.answer))
+    // set storage
+    const storageName = `test_${section.dirname}`
+    const storageObject = reactLocalStorage.getObject(storageName)
+    const page = question.page - 1
+    storageObject[page].answer = !content ? false : content.correct
+    reactLocalStorage.setObject(storageName, storageObject)
+  }
+
+  const nextLink = e => {
+    e.preventDefault()
+    setStorage()
     unCheck()
     setAnswer(initialState)
     router.push(`/section/${section.dirname}/${question.page + 1}`)
   }
 
-  const resultLink = () => {
+  const resultLink = e => {
+    e.preventDefault()
+    setStorage()
     unCheck()
     setAnswer(initialState)
     router.push(`/section/${section.dirname}/result`)
@@ -110,7 +125,7 @@ const PageDetail = ({ section, question, questionSize, answerOptions }) => {
         {questionSize != question.page ? (<>
           <button type="button" className="btn btn-primary mx-2" onClick={nextLink}>次へ</button>
         </>) : (<>
-          <button type="button" className="btn btn-primary mx-2" onClick={resultLink}>結果を見る</button>
+          <button type="button" className="btn btn-primary mx-2" onClick={resultLink}>次へ</button>
         </>)}
       </div>
       <Modal show={show} onHide={handleClose}>
