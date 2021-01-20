@@ -1,11 +1,11 @@
-
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import Layout from '../../components/layout'
-import contents from '../../contents/simulation_test_1.json'
+import Layout from '../../../components/layout'
+import contents from '../../../contents/section.json'
 import { Button, Modal } from 'react-bootstrap'
 
-const QuestionDetail = ({ question, answerOptions }) => {
+const PageDetail = ({ section, question, questionSize, answerOptions }) => {
+  // router
   const router = useRouter()
 
   // modal
@@ -13,6 +13,7 @@ const QuestionDetail = ({ question, answerOptions }) => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
+  // state
   const initialState = {
     answer: '',
     correct: false,
@@ -20,7 +21,18 @@ const QuestionDetail = ({ question, answerOptions }) => {
     checkedList: [],
   }
   const [answer, setAnswer] = useState(initialState)
+  const handleChange = e => {
+    if (question.type === 'radio') {
+      setAnswer({ ...answer, answer: e.target.value.toString() })
+    } else {
+      const element = document.getElementsByName(question.type)
+      const checked = Array.prototype.filter.call(element, value => value.checked)
+      const checkedList = checked.map(item => item.value)
+      setAnswer({ ...answer, checkedList })
+    }
+  }
 
+  // note text
   const answerText = () => {
     return answer.correct ? "よくできました!" : "不正解です。もう一度確かめてください。"
   }
@@ -31,17 +43,6 @@ const QuestionDetail = ({ question, answerOptions }) => {
   const unCheck = () => {
     for (const element of document.getElementsByName(question.type)) {
       element.checked = false;
-    }
-  }
-
-  const handleChange = e => {
-    if (question.type === 'radio') {
-      setAnswer({ ...answer, answer: e.target.value.toString() })
-    } else {
-      const element = document.getElementsByName(question.type)
-      const checked = Array.prototype.filter.call(element, value => value.checked)
-      const checkedList = checked.map(item => item.value)
-      setAnswer({ ...answer, checkedList })
     }
   }
 
@@ -68,6 +69,7 @@ const QuestionDetail = ({ question, answerOptions }) => {
     setAnswer({ ...answer, correct, message })
   }
 
+  // handle
   const handleClick = e => {
     e.preventDefault()
     answerCheck()
@@ -76,13 +78,19 @@ const QuestionDetail = ({ question, answerOptions }) => {
   const nextLink = () => {
     unCheck()
     setAnswer(initialState)
-    router.push(`/simulation_test_1/${question.id + 1}`)
+    router.push(`/section/${section.dirname}/${question.page + 1}`)
+  }
+
+  const resultLink = () => {
+    unCheck()
+    setAnswer(initialState)
+    router.push(`/section/${section.dirname}/result`)
   }
 
   return (
-    <Layout title={question ? `問題:${question.id}` : ''}>
-      <h1 className="h1">問題:{question.id}</h1>
-      <p>{question.question_text}</p>
+    <Layout title={section ? `${section.name}テスト: 問題${question.page}` : ''}>
+      <h3 className="h3 text-center my-2">{section.name}テスト: 問題{question.page}</h3>
+      <p className="lead">{question.question_text}</p>
       {answerOptions.map((answer) => (
         <div className="form-check py-1" key={answer.option_id}>
           <input className="form-check-input" type={question.type} name={question.type} value={answer.option_id} id={`flex${answer.option_id}`} onChange={handleChange} />
@@ -99,7 +107,11 @@ const QuestionDetail = ({ question, answerOptions }) => {
       </>) : (<></>)}
       <div className="text-center my-3">
         <button type="button" className="btn btn-success mx-2" onClick={handleClick}>解答を確認する</button>
-        <button type="button" className="btn btn-primary mx-2" onClick={nextLink}>次へ</button>
+        {questionSize != question.page ? (<>
+          <button type="button" className="btn btn-primary mx-2" onClick={nextLink}>次へ</button>
+        </>) : (<>
+          <button type="button" className="btn btn-primary mx-2" onClick={resultLink}>結果を見る</button>
+        </>)}
       </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>
@@ -117,17 +129,22 @@ const QuestionDetail = ({ question, answerOptions }) => {
 }
 
 export const getStaticPaths = async () => {
-  const paths = contents.question.map((value) => ({
-    params: { id: value.id.toString() },
+  const paths = contents.question.map((question) => ({
+    params: {
+      name: contents.section.find((section) => section.id == question.section_id).dirname,
+      page: question.page.toString(),
+    },
   }))
   return { paths, fallback: false }
 }
 
 export const getStaticProps = async ({ params }) => {  
-  const question = contents.question.find((value) => (value.id == params.id))
-  const question_id = question.id
-  const answerOptions = contents.answer_options.filter((value) => (value.question_id == question_id))
-  return { props: { question, answerOptions } }
+  const section = contents.section.find((value) => value.dirname == params.name)
+  const questionSize = contents.question.filter((value) => value.section_id === section.id).length
+  const question = contents.question.find((value) => value.section_id === section.id && value.page === Number(params.page))
+  const answerOptions = contents.answer_options.filter((value) => value.question_id === question.id)
+
+  return { props: { section, question, questionSize, answerOptions } }
 }
 
-export default QuestionDetail
+export default PageDetail

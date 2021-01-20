@@ -1,0 +1,504 @@
+{
+  "section": [
+    {
+      "id": 1,
+      "name": "IAM",
+      "dirname": "iam",
+      "quiz": true
+    },
+    {
+      "id": 2,
+      "name": "VPC",
+      "dirname": "vpc",
+      "quiz": true
+    },
+    {
+      "id": 3,
+      "name": "EC2",
+      "dirname": "ec2",
+      "quiz": true
+    },
+    {
+      "id": 4,
+      "name": "S3",
+      "dirname": "s3",
+      "quiz": true
+    },
+    {
+      "id": 5,
+      "name": "Well Architected Framework",
+      "dirname": "wellarchitected",
+      "quiz": true
+    },
+    {
+      "id": 6,
+      "name": "信頼性の設計",
+      "dirname": "reliability",
+      "quiz": true
+    },
+    {
+      "id": 7,
+      "name": "Route53",
+      "dirname": "route53",
+      "quiz": true
+    },
+    {
+      "id": 8,
+      "name": "データベース",
+      "dirname": "rds",
+      "quiz": true
+    },
+    {
+      "id": 9,
+      "name": "キャッシュの活用",
+      "dirname": "cache",
+      "quiz": true
+    },
+    {
+      "id": 10,
+      "name": "サーバレス",
+      "dirname": "serverless",
+      "quiz": true
+    },
+    {
+      "id": 11,
+      "name": "環境の自動化",
+      "dirname": "automating",
+      "quiz": true
+    },
+    {
+      "id": 12,
+      "name": "セキュリティと運用",
+      "dirname": "security",
+      "quiz": true
+    }
+  ],
+  "question": [
+    {
+      "id": 1,
+      "section_id": 1,
+      "page": 1,
+      "question_text": "EC2インスタンスへのIAMロールの追加や修正方法についての説明で正しいものを選択してください",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 2,
+      "section_id": 1,
+      "page": 2,
+      "question_text": "ルートアカウントが有するアクセス権限を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 3,
+      "section_id": 1,
+      "page": 3,
+      "question_text": "次のうちIAMの特徴でない要素を1つ選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 4,
+      "section_id": 1,
+      "page": 4,
+      "question_text": "パワーユーザーのアクセス権限について正しいものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 5,
+      "section_id": 1,
+      "page": 5,
+      "question_text": "IAMユーザーを作成した際にデフォルトで設定される権限はどれでしょうか。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 6,
+      "section_id": 1,
+      "page": 6,
+      "question_text": "次のうちIAMのルートアカウントの特徴を示していないものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 7,
+      "section_id": 1,
+      "page": 7,
+      "question_text": "IAMエンティティ(ユーザー、グループ、ロール) が最後にAWSサービスにアクセスした⽇付と時刻を表⽰する機能は次のうちどれか選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 8,
+      "section_id": 1,
+      "page": 8,
+      "question_text": "IAMポリシーにおいてインラインポリシーの特徴は次のうちどれでしょうか。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 9,
+      "section_id": 1,
+      "page": 9,
+      "question_text": "IAMポリシーの記述形式は次のうちどれでしょうか。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 10,
+      "section_id": 1,
+      "page": 10,
+      "question_text": "IAMの制限について正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 11,
+      "section_id": 2,
+      "page": 1,
+      "question_text": "IAMの制限について正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    }
+  ],
+  "answer_options": [
+    {
+      "id": 1,
+      "question_id": 1,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "EC2インスタンスが登録されているIAMグループにIAMロールをアタッチすることで設定することが可能である。",
+      "message": "IAMグループにはユーザーを登録することで利用することになるため、IAMグループへのIAMロールのアタッチは不正解です。EC2インスタンスにはIAMロールをアタッチします。"
+    },
+    {
+      "id": 2,
+      "question_id": 1,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "EC2のマネジメントコンソールからEC2インスタンスのアクション操作によってアタッチする。",
+      "message": "EC2インスタンスの起動時の設定やアクション操作によってIAMロールをアタッチできます。"
+    },
+    {
+      "id": 3,
+      "question_id": 1,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "IAMユーザーアカウントにIAMロールをアタッチした上でEC2インスタンスを起動する",
+      "message": "IAMユーザーアカウントには適用するものはIAMユーザーであり、IAMロールとは呼ばないため不正解です。"
+    },
+    {
+      "id": 4,
+      "question_id": 1,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "IAMのマネジメントコンソールにおいて、IAMロールを作成した際にEC2インスタンスを指定してアタッチする。",
+      "message": "IAMロールを作成した時点でEC2インスタンスにアタッチするのではなく、IAMロールを作成後、EC2インスタンスのマネジメントコンソールにおいてアクション操作でアタッチする必要があります。"
+    },
+    {
+      "id": 5,
+      "question_id": 2,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "読取専用アクセス",
+      "message": "ルートアカウントには管理者権限のアクセスが自動で付与されています。パワーユーザーアクセスはアクセス管理権限以外のリソース操作全般ができるユーザーのことです。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 6,
+      "question_id": 2,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "パワーユーザーアクセス",
+      "message": "ルートアカウントには管理者権限のアクセスが自動で付与されています。パワーユーザーアクセスはアクセス管理権限以外のリソース操作全般ができるユーザーのことです。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 7,
+      "question_id": 2,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "管理者権限アクセス",
+      "message": "ルートアカウントには管理者権限のアクセスが自動で付与されています。パワーユーザーアクセスはアクセス管理権限以外のリソース操作全般ができるユーザーのことです。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 8,
+      "question_id": 2,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "アクセス権限無し",
+      "message": "ルートアカウントには管理者権限のアクセスが自動で付与されています。パワーユーザーアクセスはアクセス管理権限以外のリソース操作全般ができるユーザーのことです。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 9,
+      "question_id": 3,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "AWSアカウントにおけるユーザーの中央管理を実現する",
+      "message": "正しい内容です。IAMはAWSアカウントにおけるユーザーの中央管理を実現することができます。"
+    },
+    {
+      "id": 10,
+      "question_id": 3,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "AWSリソースへのアクセスコントロールを実現する",
+      "message": "正しい内容です。IAMはAWSリソースへのアクセス許可や拒否をユーザーやリソースに対して実施することができます。"
+    },
+    {
+      "id": 11,
+      "question_id": 3,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "IAMグループとIAMユーザーとIAMロールの3つの形式でIAMポリシーを設定することができる",
+      "message": "正しい内容です。IAMグループとIAMユーザーとIAMロールの3つの形式でIAMポリシーを設定することで、AWSリソースへのアクセス権限を付与することができます"
+    },
+    {
+      "id": 12,
+      "question_id": 3,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "パスワードポリシーをカスタマイズすることができる",
+      "message": "正しい内容です。Day1対応で実施したようにIAMコンソール画面からパスワードポリシーを変更することが可能です。"
+    },
+    {
+      "id": 13,
+      "question_id": 3,
+      "option_id": 5,
+      "correct": true,
+      "answer_text": "多要素認証を利用することでパスワードなしのアクセスが可能である",
+      "message": "多要素認証を利用してもログインにはパスワードは必要なため、この選択肢が間違った説明であり正解となります。ログインする際にパスワード認証をしたのちに、MFAコードの入力を行うことでログインが完了します。"
+    },
+    {
+      "id": 14,
+      "question_id": 4,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "パワーユーザーは全ての権限にアクセスすることが可能である",
+      "message": "パワーユーザーはIAMユーザーやグループの管理以外の全てのAWSサービスへのフルアクセス権限を有しています。"
+    },
+    {
+      "id": 15,
+      "question_id": 4,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "パワーユーザーはルート権限のことである",
+      "message": "パワーユーザーはIAMユーザーやグループの管理以外の全てのAWSサービスへのフルアクセス権限を有しています。ルートユーザーやルートアカウントのことで、アクセス管理権限も有しておりパワーユーザーよりも広範囲な権限があります。"
+    },
+    {
+      "id": 16,
+      "question_id": 4,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "パワーユーザーはIAMユーザーやグループの管理以外全てのAWSサービスへのフルアクセス権限を有している",
+      "message": "こちらが正解です。パワーユーザーはIAMユーザーやグループの管理以外の全てのAWSサービスへのフルアクセス権限を有しています。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 17,
+      "question_id": 4,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "パワーユーザーは全てのAWSサービスへのフルアクセス権限を有している",
+      "message": "全てのAWSサービスへのフルアクセス権限を有しているのはルートアカウントや管理者権限アカウントなどです。パワーユーザーはIAMユーザーやグループの管理以外の全てのAWSサービスへのフルアクセス権限を有しています。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 18,
+      "question_id": 5,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "全てのAWSサービスにフルアクセス権限を有している。",
+      "message": "IAMユーザーは初期のデフォルト設定では全てのAWSサービスにアクセスする権限を有していません。詳しくはIAMグループへのポリシー適用をご参照ください。"
+    },
+    {
+      "id": 19,
+      "question_id": 5,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "全てのAWSサービスに読取権限のみを有している。",
+      "message": "IAMユーザーは初期のデフォルト設定では全てのAWSサービスにアクセスする権限を有していません。詳しくはIAMグループへのポリシー適用をご参照ください。"
+    },
+    {
+      "id": 20,
+      "question_id": 5,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "全てのAWSサービスにアクセスする権限を有していない。",
+      "message": "正しい選択肢です。IAMユーザーは初期のデフォルト設定では全てのAWSサービスにアクセスする権限を有していません。詳しくはIAMグループへのポリシー適用をご参照ください。"
+    },
+    {
+      "id": 21,
+      "question_id": 5,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "パワーユーザーアクセスを有している。",
+      "message": "IAMユーザーは初期のデフォルト設定では全てのAWSサービスにアクセスする権限を有していません。詳しくはIAMグループへのポリシー適用をご参照ください。"
+    },
+    {
+      "id": 22,
+      "question_id": 6,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "ルートアカウントのメールアドレスやパスワードの変更 ",
+      "message": "こちらは正しいルートアカウントの権限です。ルートアカウントだけがルートアカウントのメールアドレスやパスワードを変更することができます。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 23,
+      "question_id": 6,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "逆引きDNS申請",
+      "message": "こちらは正しいルートアカウントの権限です。逆引きDNS申請はルートアカウントのみが実施可能です。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 24,
+      "question_id": 6,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "AWS Organizationを利用した組織的な管理全般",
+      "message": "こちらはAWS Organizationにおいてマスターアカウントではない限り実施できないため不正解です。"
+    },
+    {
+      "id": 25,
+      "question_id": 6,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "AWSアカウントの停⽌",
+      "message": "こちらは正しいルートアカウントの権限です。AWSアカウントの停⽌や削除はルートアカウントのみに許されています。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 26,
+      "question_id": 6,
+      "option_id": 5,
+      "correct": false,
+      "answer_text": "その他のIAMユーザーが課⾦情報へのアクセス可能とするアクティベイト権限",
+      "message": "こちらは正しいルートアカウントの権限です。ルートアカウントのアカウント画面において、その他のIAMユーザーが課⾦情報へのアクセス可能とするアクティベイトを実行することができます。"
+    },
+    {
+      "id": 27,
+      "question_id": 7,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "Credential Report（認証情報レポート）",
+      "message": "ユーザーによる利用日時などが記録されたIAM認証情報に係るレポートファイルです。認証情報レポートを使用して、監査やコンプライアンスの作業を支援することができます。このレポートを使用して、パスワードやアクセスキーのローテーションなど、認証情報ライフサイクルの要件の結果を監査できます。アクセスキーが直近で利用された日時は記録されますが、ユーザーのアクセスログとは異なるものです。"
+    },
+    {
+      "id": 28,
+      "question_id": 7,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "Access Advisor",
+      "message": "Access AdvisorのLast Accessed DataにIAMエンティティ(ユーザー、グループ、ロール) が最後にAWSサービスにアクセスした⽇付と時刻が表⽰されます。AWS Identity and Access Management (IAM) アクセスアドバイザーでは、AWS コマンドラインインターフェイス (AWS CLI) または SDK で IAM アクセスアドバイザー API を使用することで、すべてのアカウントで IAM アクセス権限の分析を自動化できます。IAM アクセスアドバイザーは、サービスアクセス監査、不要なアクセス権限の削除、IAM エンティティ (ユーザー、ロール、グループなど) が AWS サービスに最終アクセスしたタイムスタンプ取得のための適切なアクセス権限の設定を支援します。"
+    },
+    {
+      "id": 29,
+      "question_id": 7,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "AWS Config",
+      "message": "IAMのUser、Group、Role、Policyに関して変更履歴、構成変更を管理・確認するサービスです。AWS リソースの設定が継続的にモニタリングおよび記録され、望まれる設定に対する記録への評価を自動的に実行できます。"
+    },
+    {
+      "id": 30,
+      "question_id": 7,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "AWS CloudTrail",
+      "message": "AWSインフラストラクチャ全体でアカウントアクティビティをログに記録します。AWS CloudTrail は、AWS アカウントのガバナンス、コンプライアンス、運用監査、リスク監査を行うためのサービスです。CloudTrail を使用すると、AWS インフラストラクチャ全体でアカウントアクティビティをログに記録し、継続的に監視し、保持できます。"
+    },
+    {
+      "id": 31,
+      "question_id": 8,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "AWS アカウントで作成・管理する管理ポリシーであり、同じポリシーを複数のIAMエンティティにアタッチできる",
+      "message": "AWS アカウントで管理できるスタンドアロンのポリシーを作成することができ、これはカスタマー管理ポリシーと呼ばれています。次に、AWS アカウントの複数のプリンシパルエンティティにポリシーをアタッチできます。ポリシーをプリンシパルエンティティにアタッチすると、ポリシーで定義されたアクセス権限がエンティティに付与されます。"
+    },
+    {
+      "id": 32,
+      "question_id": 8,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "AWSが作成および管理するポリシー",
+      "message": "AWSが提供する管理ポリシーはインラインポリシーではないため不正解です。AWS 管理ポリシーは、AWS が作成および管理するスタンドアロンポリシーです。"
+    },
+    {
+      "id": 33,
+      "question_id": 8,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "1つのプリンシパルエンティティ (ユーザー、グループ、またはロール) に埋め込まれたポリシーで、プリンシパルエンティティにアタッチすることができます。",
+      "message": "インラインポリシーは⾃⾝で作成および管理するポリシーであり、プリンシパルエンティティにアタッチすることができます。インラインポリシーは、ポリシーとそれが適用されているプリンシパルエンティティとの厳密な 1 対 1 の関係を維持する必要がある場合に便利です。たとえば、ポリシー内のアクセス権限が意図したプリンシパルエンティティ以外のエンティティに間違って割り当てられないようにする必要がある場合などです。インラインポリシーを使用すると、ポリシーのアクセス許可が間違ったプリンシパルエンティティにアタッチされることはありません。"
+    },
+    {
+      "id": 34,
+      "question_id": 8,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ルートアカウントによって作成される管理ポリシー",
+      "message": "インラインポリシーはルートアカウントによって生成される管理ポリシーである必要はありません。"
+    },
+    {
+      "id": 35,
+      "question_id": 9,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "Javascript",
+      "message": "IAMポリシーはJSONで記述します。"
+    },
+    {
+      "id": 36,
+      "question_id": 9,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "YAML",
+      "message": "IAMポリシーはJSONで記述します。"
+    },
+    {
+      "id": 37,
+      "question_id": 9,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "JSON",
+      "message": "正解です。IAMポリシーはJSONで記述します。"
+    },
+    {
+      "id": 38,
+      "question_id": 9,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "XML",
+      "message": "IAMポリシーはJSONで記述します。"
+    },
+    {
+      "id": 39,
+      "question_id": 10,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "1アカウントでIAMグループは1000グループまで作成可能",
+      "message": "間違いです。1アカウントでIAMグループは300グループまで可能です。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 40,
+      "question_id": 10,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "1アカウントでIAMユーザーを10000ユーザーまで作成可能",
+      "message": "間違いです。1アカウントでIAMユーザーを5000ユーザーまで作成可能です。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 41,
+      "question_id": 10,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "IAMユーザーは10個のグループまで所属することが可能",
+      "message": "正解です。IAMユーザーは10個のグループまで所属することが可能です。詳しくはIAMの概要をご参照ください。"
+    },
+    {
+      "id": 42,
+      "question_id": 10,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "1アカウントでIAMロールを250ロールまで作成可能",
+      "message": "間違いです。以前は1アカウントでIAMロールを250ロールまでの制限でしたが、1000まで上限が緩和されました。"
+    }
+  ]
+}
