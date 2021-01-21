@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import Layout from '../../../components/layout'
 import contents from '../../../contents/section.json'
 import { Button, Modal } from 'react-bootstrap'
-import { reactLocalStorage } from 'reactjs-localstorage'
 
 const PageDetail = ({ section, question, questionSize, answerOptions }) => {
   // router
@@ -79,11 +78,13 @@ const PageDetail = ({ section, question, questionSize, answerOptions }) => {
   const setStorage = () => {
     const content = answerOptions.find((value) => (value.option_id == answer.answer))
     // set storage
-    const storageName = `test_${section.dirname}`
-    const storageObject = reactLocalStorage.getObject(storageName)
+    const storageName = `section_${section.dirname}`
+    const storageObject = JSON.parse(localStorage.getItem(storageName))
     const page = question.page - 1
-    storageObject[page].answer = !content ? false : content.correct
-    reactLocalStorage.setObject(storageName, storageObject)
+    if (!!storageObject && storageObject.length > 0) {
+      storageObject[page].answer = !content ? false : content.correct
+      localStorage.setItem(storageName, JSON.stringify(storageObject), { secure: false })
+    }
   }
 
   const nextLink = e => {

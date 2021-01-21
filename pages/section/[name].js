@@ -3,19 +3,18 @@ import { useRouter } from 'next/router'
 import Layout from '../../components/layout'
 import contents from '../../contents/section.json'
 import { Button } from 'react-bootstrap'
-import { reactLocalStorage } from 'reactjs-localstorage'
 
 const SectionDetail = ({ section, question }) => {
   // router
   const router = useRouter()
   const testStart = () => {
-    const storageName = `test_${section.dirname}`
-    reactLocalStorage.remove(storageName)
+    localStorage.clear()
+    const storageName = `section_${section.dirname}`
     const storageObject = question.map(valule => ({
-      "page": valule.page,
-      "answer": false,
+      page: valule.page,
+      answer: false,
     }))
-    reactLocalStorage.setObject(storageName, storageObject)
+    localStorage.setItem(storageName, JSON.stringify(storageObject))
     router.push(`/section/${section.dirname}/1`)
   }
 

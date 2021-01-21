@@ -1,28 +1,23 @@
-import Link from 'next/link'
-import { useState } from 'react'
 import Layout from '../../../components/layout'
 import contents from '../../../contents/section.json'
-import { Button } from 'react-bootstrap'
-import { reactLocalStorage } from 'reactjs-localstorage'
 
 const PageResult = ({ section, question }) => {
-  const [result, setResult] = useState([])
 
-  const handleResult = () => {
-    const storageName = `test_${section.dirname}`
-    const storageObject = reactLocalStorage.getObject(storageName)
-    // console.log(storageObject)
-    // setResult(storageObject)
-  }
+  const storageName = `section_${section.dirname}`
+  const storageObject = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem(storageName)) : []
 
   return (
     <Layout title={section ? `${section.name}テスト: 結果` : ''}>
       <h1 className="h1">{section.name}テスト: 結果</h1>
       <h6 className="h6">問題の数: {question.length}</h6>
       <div className="text-center">
-        <Button variant="secondary" onClick={handleResult}>
-          結果を確認
-        </Button>
+        {storageObject.length > 0 ? (<>
+          {storageObject.map((item) => (
+            <div className="py-1" key={item.page}>
+              {item.page}: {item.answer ? '正解' : '不正解'}
+            </div>
+          ))}
+        </>) : (<></>)}
       </div>
     </Layout>
   )

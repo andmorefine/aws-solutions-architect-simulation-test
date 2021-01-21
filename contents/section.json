@@ -158,7 +158,79 @@
       "id": 11,
       "section_id": 2,
       "page": 1,
-      "question_text": "IAMの制限について正しい内容を選択してください。",
+      "question_text": "次のCIDRのうち512個のIPアドレスを設定するCIDR設定を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 12,
+      "section_id": 2,
+      "page": 2,
+      "question_text": "パブリックサブネットを設置するために必要となる設定を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 13,
+      "section_id": 2,
+      "page": 3,
+      "question_text": "NATゲートウェイの特徴について正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 14,
+      "section_id": 2,
+      "page": 4,
+      "question_text": "VPCを設置しないでEC2インスタンスを立ち上げる場合、VPCはどのような設定になるでしょうか。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 15,
+      "section_id": 2,
+      "page": 5,
+      "question_text": "次のうちネットワークACLの特徴を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 16,
+      "section_id": 2,
+      "page": 6,
+      "question_text": "Direct Connectの特徴として間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 17,
+      "section_id": 2,
+      "page": 7,
+      "question_text": "VPCエンドポイントのゲートウェイ型の特徴を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 18,
+      "section_id": 2,
+      "page": 8,
+      "question_text": "VPC peeringの特徴として間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 19,
+      "section_id": 2,
+      "page": 9,
+      "question_text": "VPC Flow logsの特徴について間違っている説明を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 20,
+      "section_id": 2,
+      "page": 10,
+      "question_text": "次のうち、ネットワークACLの特徴を選択してください。",
       "type": "radio",
       "num_checkboxions": ""
     }
@@ -499,6 +571,326 @@
       "correct": false,
       "answer_text": "1アカウントでIAMロールを250ロールまで作成可能",
       "message": "間違いです。以前は1アカウントでIAMロールを250ロールまでの制限でしたが、1000まで上限が緩和されました。"
+    },
+    {
+      "id": 43,
+      "question_id": 11,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "10.0.0.0/16",
+      "message": "10.0.0.0/23が512個のIPアドレスを設定することができます。"
+    },
+    {
+      "id": 44,
+      "question_id": 11,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "10.0.0.0/20",
+      "message": "10.0.0.0/23が512個のIPアドレスを設定することができます。"
+    },
+    {
+      "id": 45,
+      "question_id": 11,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "10.0.0.0/23",
+      "message": "10.0.0.0/23が512個のIPアドレスを設定することができます。"
+    },
+    {
+      "id": 46,
+      "question_id": 11,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "10.0.0.0/32",
+      "message": "10.0.0.0/23が512個のIPアドレスを設定することができます。"
+    },
+    {
+      "id": 47,
+      "question_id": 12,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "ルートテーブルにおいてインターネットとのアクセス設定をオープンにする",
+      "message": "インターネットゲートウェイをVCPサブネットのルートテーブルに設定することで、そのサブネットがパブリックサブネットとなります。"
+    },
+    {
+      "id": 48,
+      "question_id": 12,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "パブリックアクセスの有効化設定において有効化を選択する",
+      "message": "インターネットゲートウェイをVCPサブネットのルートテーブルに設定することで、そのサブネットがパブリックサブネットとなります。"
+    },
+    {
+      "id": 49,
+      "question_id": 12,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "パブリックとプライベートの設定選択においてパブリックを選択する",
+      "message": "インターネットゲートウェイをVCPサブネットのルートテーブルに設定することで、そのサブネットがパブリックサブネットとなります。"
+    },
+    {
+      "id": 50,
+      "question_id": 12,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "インターネットゲートウェイをルートテーブルに設定する",
+      "message": "インターネットゲートウェイをVCPサブネットのルートテーブルに設定することで、そのサブネットがパブリックサブネットとなります。"
+    },
+    {
+      "id": 51,
+      "question_id": 13,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "NATゲートウェイはインターネットからプライベートサブネットへとアクセスを可能にするため、プライベートサブネットに設置する",
+      "message": "NATゲートウェイはプライベートサブネットからインターネットへとアクセスを可能にするため、インターネットと接続しているパブリックサブネットに設置するのが正しいです。その上で、プライベートサブネットのアドレス交換をする必要があるため、プライベートサブネットに設置されたルートテーブルへの設定を行います。"
+    },
+    {
+      "id": 52,
+      "question_id": 13,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "NATゲートウェイはプライベートサブネットからインターネットへとアクセスを可能にするため、プライベートサブネットに設置する",
+      "message": "NATゲートウェイはプライベートサブネットからインターネットへとアクセスを可能にするため、インターネットと接続しているパブリックサブネットに設置するのが正しいです。その上で、プライベートサブネットのアドレス交換をする必要があるため、プライベートサブネットに設置されたルートテーブルへの設定を行います。"
+    },
+    {
+      "id": 53,
+      "question_id": 13,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "NATゲートウェイはプライベートサブネットからインターネットへとアクセスを可能にするため、パブリックサブネットに設置する",
+      "message": "NATゲートウェイはプライベートサブネットからインターネットへとアクセスを可能にするため、インターネットと接続しているパブリックサブネットに設置するのが正しいです。その上で、プライベートサブネットのアドレス交換をする必要があるため、プライベートサブネットに設置されたルートテーブルへの設定を行います。"
+    },
+    {
+      "id": 54,
+      "question_id": 13,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "NATゲートウェイはインターネットからプライベートサブネットへとアクセスを可能にするため、パブリックサブネットに設置する",
+      "message": "NATゲートウェイはプライベートサブネットからインターネットへとアクセスを可能にするため、インターネットと接続しているパブリックサブネットに設置するのが正しいです。その上で、プライベートサブネットのアドレス交換をする必要があるため、プライベートサブネットに設置されたルートテーブルへの設定を行います。"
+    },
+    {
+      "id": 55,
+      "question_id": 14,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "単一のデフォルトVPCにパブリックサブネットが1つデフォルトで設定される",
+      "message": "単一のデフォルトVPCにパブリックサブネットが1つデフォルトで設定されます。サブネットの設定は必須です。"
+    },
+    {
+      "id": 56,
+      "question_id": 14,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "単一のデフォルトVPCに直接にEC2インスタンスが設置される",
+      "message": "単一のデフォルトVPCにパブリックサブネットが1つデフォルトで設定されます。サブネットの設定は必須です。"
+    },
+    {
+      "id": 57,
+      "question_id": 14,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "単一のデフォルトVPCにプライベートサブネットが1つデフォルトで設定される。",
+      "message": "単一のデフォルトVPCにパブリックサブネットが1つデフォルトで設定されます。サブネットの設定は必須です。"
+    },
+    {
+      "id": 58,
+      "question_id": 14,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "単一のAZに直接EC2インスタンスが設置され、VPCは設置されない。",
+      "message": "単一のデフォルトVPCにパブリックサブネットが1つデフォルトで設定されます。サブネットの設定は必須です。"
+    },
+    {
+      "id": 59,
+      "question_id": 15,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "インスタンスのトラフィックをコントロールする",
+      "message": "セキュリティグループがEC2インスタンスのトラフィックをコントロールします。ネットワークACLはサブネットのトラフィックを制御します。"
+    },
+    {
+      "id": 60,
+      "question_id": 15,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "VPC全体のトラフィックをコントロールする",
+      "message": "ネットワークACLはサブネット単位でトラフィックをコントロールします。"
+    },
+    {
+      "id": 61,
+      "question_id": 15,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "ステートレスである",
+      "message": "セキュリティグループとは異なり、ネットワークACLはステートレスなため、返されたトラフィックをルールによって明示的に許可する必要があります。セキュリティグループはステートフルです。"
+    },
+    {
+      "id": 62,
+      "question_id": 15,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "通常はインバウンドの許可設定のみを行う",
+      "message": "ステートレスであるためインバウンドとアウトバウンドの両方の許可設定が必須です。セキュリティグループの場合はステートフルであるためインバウンドのみの設定でも、アウトバウンドは許可となります。"
+    },
+    {
+      "id": 63,
+      "question_id": 16,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "データセンターやオフィスを専用線などを介してAWSへプライベートに接続するサービス",
+      "message": "AWS Direct Connect はオンプレミスから AWS への専用ネットワーク接続の構築をシンプルにするクラウドサービスソリューションです。"
+    },
+    {
+      "id": 64,
+      "question_id": 16,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "ネットワーク信頼性 ／帯域幅が高い",
+      "message": "AWS Direct Connect を使用すると、専用線接続を利用するデータと、そのデータがルーティングされる方法を選択できるため、インターネットベースの接続において、より安定性のあるネットワーク体験を提供することが可能となります。"
+    },
+    {
+      "id": 65,
+      "question_id": 16,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "Direct Connectデバイスを自社データセンターに設置して接続する",
+      "message": "こちらが間違った説明内容であり正解となります。AWS Direct Connect のパートナーまたはネットワークプロバイダーと連携して、ユーザーのデータセンター、オフィス、またはコロケーション環境から AWS Direct Connect ロケーションに接続します。"
+    },
+    {
+      "id": 66,
+      "question_id": 16,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "Direct Connect gatewayを利用することで複数リージョンと接続できる",
+      "message": "Direct Connect GatewayをいずれかのAWSリージョンに作成すると、AWSの全リージョンに複製され、相互接続ができるようになります。"
+    },
+    {
+      "id": 67,
+      "question_id": 17,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "VPC内部から直接外のサービスと通信する",
+      "message": "Gateway型はサブネットに特殊なルーティングを設定し、VPC内部から直接外のサービスと通信します。"
+    },
+    {
+      "id": 68,
+      "question_id": 17,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "サブネットにエンドポイント用のプライベートIPアドレス を有する",
+      "message": "サブネットにエンドポイント用のプライベートIPアドレス を有するのはプライベートリンク型の説明です。詳しくはVPCとの接続を参照してください。"
+    },
+    {
+      "id": 69,
+      "question_id": 17,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "有料サービスである",
+      "message": "VPCエンドポイントの利用は無料です。"
+    },
+    {
+      "id": 70,
+      "question_id": 17,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "アクセス制御にはネットワークACLを利用する",
+      "message": "VPCエンドポイントはエンドポイントポリシーによりアクセス制御を実施します。"
+    },
+    {
+      "id": 71,
+      "question_id": 18,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "異なるAWSアカウント間のVPC間をピア接続可能",
+      "message": "VPC ピアリング接続は、2 つの VPC 間でプライベートなトラフィックをルーティング可能にするネットワーキング接続です。どちらの VPC のインスタンスも、同じネットワーク内に存在しているかのように、相互に通信できます。VPC ピアリング接続は、自分の VPC 間、別の AWS アカウントの VPC との間、または別の AWS リージョンの VPC との間に作成できます。"
+    },
+    {
+      "id": 72,
+      "question_id": 18,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "VPCであれば全てのリージョン間で異なるVPC間のピア接続も可能",
+      "message": "こちらが間違った説明内容であり正解となります。2020年2月時点では一部のリージョン間に限られています。中国リージョンは政治的な理由もあり、その他のリージョンとは接続できないようになっています。"
+    },
+    {
+      "id": 73,
+      "question_id": 18,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "単一障害点や帯域幅のボトルネックは存在しない",
+      "message": "AWS では VPC の既存のインフラストラクチャを使用して VPC ピアリング接続を作成しています。これはゲートウェイでも AWS Site-to-Site VPN 接続でもなく、個別の物理ハードウェアには依存しません。通信の単一障害点や帯域幅のボトルネックは存在しません。"
+    },
+    {
+      "id": 74,
+      "question_id": 18,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "接続したいVPCとは直接Peeringする必要がある",
+      "message": "正しい内容です。AがCと接続したい場合はA→B→Cというように、Bを間に介した接続はできません。A→Cと直接接続する必要があります。"
+    },
+    {
+      "id": 75,
+      "question_id": 19,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "ネットワークインタフェースを送信元/ 送信先とするトラフィックが対象",
+      "message": "VPC Flow logsはネットワークインターフェイスとの間で行き来する IP トラフィックに関する情報をキャプチャします。ネットワークインタフェースを送信元/ 送信先とするトラフィックが対象となります。"
+    },
+    {
+      "id": 76,
+      "question_id": 19,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "機能自体には追加料金は発生しない。",
+      "message": "正しい内容です機能自体には追加料金は発生しないのですが、蓄積されるログデータ自体には課金されることに注意してください。S3に蓄積する場合はS3のデータ保存コストがかかります。"
+    },
+    {
+      "id": 77,
+      "question_id": 19,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "キャプチャウィンドウと言われる時間枠 (約10分間)で収集・プロセッシング・保存する",
+      "message": "フローログレコードは、VPC のネットワークの流れを表します。デフォルトでは、各レコードはキャプチャウィンドウ内に発生するネットワークインターネットプロトコル (IP) トラフィックフローをキャプチャします。キャプチャウィンドウとは、データのすべてのフローがキャプチャされる最大 10 分間の期間のことです。データのキャプチャ、処理、発行にかかる合計時間は、集計期間と呼ばれます。集計期間は最大 15 分間です。"
+    },
+    {
+      "id": 78,
+      "question_id": 19,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "セキュリティグループだけでaccepted/rejectされたトラフィックログを取得する",
+      "message": "こちらが間違った説明内容であり正解となります。セキュリティグループだけではなく、ネットワークACLのルールも対象となります。詳しくはVPCとの接続を参照してください。"
+    },
+    {
+      "id": 79,
+      "question_id": 20,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "許可のみをIn/outで指定する",
+      "message": "許可と拒否のIn/outを取る方式はネットワークACLで利用され、セキュリティグループ（EC2インスタンス）では許可のみを設定します。"
+    },
+    {
+      "id": 80,
+      "question_id": 20,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "全てのルールを適用する。",
+      "message": "ネットワークACLは番号の順序通りに適用するのが特徴です。セキュリティグループは全てのルールを適用します。"
+    },
+    {
+      "id": 81,
+      "question_id": 20,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "番号の順序通りに適用する",
+      "message": "ネットワークACLは番号の順序通りに適用するのが特徴です。セキュリティグループは全てのルールを適用します。"
+    },
+    {
+      "id": 82,
+      "question_id": 20,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ステートフルであり戻りトラフィックの考慮がいらない",
+      "message": "セキュリティグループはステートフルであり、ネットワークACLはステートレスです。"
     }
   ]
 }
