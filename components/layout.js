@@ -4,7 +4,7 @@ import Header from './header'
 import Footer from './footer'
 
 export default function Layout({ children, title }) {
-  const defaultTitle = 'AWS模擬試験'
+  const defaultTitle = 'AWS試験対策'
   const headTitle = title ? `${title} | ${defaultTitle}` : defaultTitle
 
   return (
