@@ -1,18 +1,30 @@
+import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 import Layout from '../../../components/layout'
 import contents from '../../../contents/section.json'
 
 const PageResult = ({ section, question }) => {
+  const router = useRouter()
 
-  const storageName = `section_${section.dirname}`
-  const storageObject = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem(storageName)) : []
+  const [result, setResult] = useState([])
+  useEffect(() => {
+    const storageName = `section_${section.dirname}`
+    const storageObject = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem(storageName)) : []
+    setResult(storageObject)
+  }, [])
+
+  if (!result) {
+    router.push(`/section/${section.dirname}`)
+    return <></>
+  }
 
   return (
     <Layout title={section ? `${section.name}テスト: 結果` : ''}>
       <h1 className="h1">{section.name}テスト: 結果</h1>
       <h6 className="h6">問題の数: {question.length}</h6>
       <div className="text-center">
-        {storageObject.length > 0 ? (<>
-          {storageObject.map((item) => (
+        {result.length > 0 ? (<>
+          {result.map((item) => (
             <div className="py-1" key={item.page}>
               {item.page}: {item.answer ? '正解' : '不正解'}
             </div>

@@ -21,7 +21,7 @@ export default function Home() {
           <Col sm={4} md={3}>
             <Card>
               <Link href="/simulation_test_1">
-                <a className="list-group-item list-group-item-action">模擬試験1</a>
+                <a className="list-group-item list-group-item-action">模擬試験①</a>
               </Link>
             </Card>
           </Col>

@@ -126,7 +126,7 @@ const PageDetail = ({ section, question, questionSize, answerOptions }) => {
         {questionSize != question.page ? (<>
           <button type="button" className="btn btn-primary mx-2" onClick={nextLink}>次へ</button>
         </>) : (<>
-          <button type="button" className="btn btn-primary mx-2" onClick={resultLink}>次へ</button>
+          <button type="button" className="btn btn-primary mx-2" onClick={resultLink}>結果確認</button>
         </>)}
       </div>
       <Modal show={show} onHide={handleClose}>

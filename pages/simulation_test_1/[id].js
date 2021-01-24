@@ -73,10 +73,36 @@ const QuestionDetail = ({ question, answerOptions }) => {
     answerCheck()
   }
 
-  const nextLink = () => {
+  const questionSize = () => {
+    return contents.question.length
+  }
+
+  const setStorage = () => {
+    const content = answerOptions.find((value) => (value.option_id == answer.answer))
+    // set storage
+    const storageName = `simulation_test_1`
+    const storageObject = JSON.parse(localStorage.getItem(storageName))
+    const page = question.id - 1
+    if (!!storageObject && storageObject.length > 0) {
+      storageObject[page].answer = !content ? false : content.correct
+      localStorage.setItem(storageName, JSON.stringify(storageObject), { secure: false })
+    }
+  }
+
+  const nextLink = e => {
+    e.preventDefault()
+    setStorage()
     unCheck()
     setAnswer(initialState)
     router.push(`/simulation_test_1/${question.id + 1}`)
+  }
+
+  const resultLink = e => {
+    e.preventDefault()
+    setStorage()
+    unCheck()
+    setAnswer(initialState)
+    router.push(`/simulation_test_1/result`)
   }
 
   return (
@@ -99,7 +125,11 @@ const QuestionDetail = ({ question, answerOptions }) => {
       </>) : (<></>)}
       <div className="text-center my-3">
         <button type="button" className="btn btn-success mx-2" onClick={handleClick}>解答を確認する</button>
-        <button type="button" className="btn btn-primary mx-2" onClick={nextLink}>次へ</button>
+        {questionSize() != question.id ? (<>
+          <button type="button" className="btn btn-primary mx-2" onClick={nextLink}>次へ</button>
+        </>) : (<>
+          <button type="button" className="btn btn-primary mx-2" onClick={resultLink}>結果確認</button>
+        </>)}
       </div>
       <Modal show={show} onHide={handleClose}>
         <Modal.Header>

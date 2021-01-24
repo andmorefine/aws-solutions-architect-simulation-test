@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout'
 import contents from '../../contents/section.json'
@@ -8,8 +7,8 @@ const SectionDetail = ({ section, question }) => {
   // router
   const router = useRouter()
   const testStart = () => {
-    localStorage.clear()
     const storageName = `section_${section.dirname}`
+    localStorage.removeItem(storageName)
     const storageObject = question.map(valule => ({
       page: valule.page,
       answer: false,

@@ -20,8 +20,6 @@ const SectionIndex = ({ posts }) => {
 
   if (!result) return <></>
 
-  console.log(result)
-
   return (
     <Layout title="練習問題: セクション一覧">
       <h1 className="h1">練習問題: セクション一覧</h1>
