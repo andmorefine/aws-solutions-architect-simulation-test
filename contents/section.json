@@ -313,6 +313,86 @@
       "question_text": "AMIの特徴について間違っているものを選択してください。",
       "type": "radio",
       "num_checkboxions": ""
+    },
+    {
+      "id": 31,
+      "section_id": 4,
+      "page": 1,
+      "question_text": "S3の設置場所はどこでしょうか。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 32,
+      "section_id": 4,
+      "page": 2,
+      "question_text": "STANDARD-IAの可用性を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 33,
+      "section_id": 4,
+      "page": 3,
+      "question_text": "利用頻度は低いため中長期保存したいデータがあります。しかしながら、たまにデータの取り出しが発生するため、取り出しに時間がかかるようでは業務に支障があります。このデータはそれほど重要ではありません。\n最もコストを抑えたい場合にどのストレージタイプを選択するべきでしょうか？",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 34,
+      "section_id": 4,
+      "page": 4,
+      "question_text": "バケットとオブジェクトへのアクセス権限を設定する際に利用するアクセス管理方法を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 35,
+      "section_id": 4,
+      "page": 5,
+      "question_text": "オブジェクト形式のストレージに関する説明として合っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 36,
+      "section_id": 4,
+      "page": 6,
+      "question_text": "誤って削除してしまったオブジェクトデータの復元方法として正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 37,
+      "section_id": 4,
+      "page": 7,
+      "question_text": "S3マネージメントコンソールのプロパティにある機能として間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 38,
+      "section_id": 4,
+      "page": 8,
+      "question_text": "S3を利用した静的ホスティングについて合っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 39,
+      "section_id": 4,
+      "page": 9,
+      "question_text": "次のうちS3のサーバーサイドのデータ暗号化において利用できない暗号化方式を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 40,
+      "section_id": 4,
+      "page": 10,
+      "question_text": "次の暗号化方式の中でユーザー側で用意した暗号キーを利用するサーバーサイド暗号化形式を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
     }
   ],
   "answer_options": [
@@ -1283,6 +1363,326 @@
       "correct": false,
       "answer_text": "AMIは別リージョンにコピーすることができる",
       "message": "正しい内容です。AMIは別リージョンにコピーして、別リージョン内で同じEC2インスタンス構成を再現することができます。"
+    },
+    {
+      "id": 122,
+      "question_id": 31,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "特定のリージョン",
+      "message": "S3はリージョンを指定してリージョン内に設置されるため正しい内容です。"
+    },
+    {
+      "id": 123,
+      "question_id": 31,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "特定のAZ",
+      "message": "S3はリージョンを指定してリージョン内に設置されます。"
+    },
+    {
+      "id": 124,
+      "question_id": 31,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "特定のVPC",
+      "message": "S3はリージョンを指定してリージョン内に設置されます。"
+    },
+    {
+      "id": 125,
+      "question_id": 31,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "特定のサブネット",
+      "message": "S3はリージョンを指定してリージョン内に設置されます。"
+    },
+    {
+      "id": 126,
+      "question_id": 32,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "99.9%",
+      "message": "Standard-IAの可用性は設計上現在99.9%となっています(Standardは99.99%)。耐久性は同じイレブンナインとなります"
+    },
+    {
+      "id": 127,
+      "question_id": 32,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "99.99%",
+      "message": "Standard-IAの可用性は設計上現在99.9%となっています(Standardは99.99%)。耐久性は同じイレブンナインとなります。"
+    },
+    {
+      "id": 128,
+      "question_id": 32,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "99.9999%",
+      "message": "Standard-IAの可用性は設計上現在99.9%となっています(Standardは99.99%)。耐久性は同じイレブンナインとなります。"
+    },
+    {
+      "id": 129,
+      "question_id": 32,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "99.999999999%",
+      "message": "Standard-IAの可用性は設計上現在99.9%となっています(Standardは99.99%)。耐久性は同じイレブンナインとなります。"
+    },
+    {
+      "id": 130,
+      "question_id": 33,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "STANDARD",
+      "message": "STANDARDはアクセス頻度が高いデータを大量に保存する際に利用される標準型のS3ストレージです。コストはS3の中では比較的に高いストレージタイプとなります。"
+    },
+    {
+      "id": 131,
+      "question_id": 33,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "STANDARD-IA",
+      "message": "One Zone-IAがアクセス頻度は低いが、必要に応じてすぐに取り出すデータ向けです。STANDARD IAはOne Zone IAと同様にアクセス頻度が低いデータの保存向けですが、コストがOne Zone IAよりも若干高く設定されています。Standard IAも低頻度アクセス用のストレージタイプですが、One-Zone IAに比較して重要なデータ向けとなります。"
+    },
+    {
+      "id": 132,
+      "question_id": 33,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "One Zone-IA",
+      "message": "正しいです。One Zone-IAはアクセス頻度は低いが、必要に応じてすぐに取り出すデータ向けですが、STANDARDとSTANDARD-IAに比較して最もコストが安く利用できます。"
+    },
+    {
+      "id": 133,
+      "question_id": 33,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "RRS",
+      "message": "RRSはStandardよりも値段が高くなっています。現在では使用が推奨されていないストレージタイプです。"
+    },
+    {
+      "id": 134,
+      "question_id": 34,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "IAMポリシー",
+      "message": "IAMポリシーはIAMユーザーに対してアクセス権限を設定します。"
+    },
+    {
+      "id": 135,
+      "question_id": 34,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "バケットポリシー",
+      "message": "正解です。バケットポリシーを利用してS3バケットとオブジェクトに対するアクセス権限を設定します。"
+    },
+    {
+      "id": 136,
+      "question_id": 34,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "セキュリティグループ",
+      "message": "セキュリティグループはインスタンスへのアクセス権限を設定します。"
+    },
+    {
+      "id": 137,
+      "question_id": 34,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "事前署名付きURL",
+      "message": "AWS SDKで生成した事前署名付きURLでS3のオブジェクトへの一定時間アクセスを許可します。"
+    },
+    {
+      "id": 138,
+      "question_id": 35,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "高速・広帯域幅であり、データベース用に向いている",
+      "message": "EBSのことです。ブロックストレージは効果的で信頼性の高いデータ保存方法で、使用と管理が容易です。大規模なトランザクションを実行する企業や、大規模なデータベースをデプロイする企業に適しています。"
+    },
+    {
+      "id": 139,
+      "question_id": 35,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "安価かつ高い耐久性をもつストレージ",
+      "message": "オブジェクト型ストレージは静的データに適したストレージシステムで、アジリティやフラット構造という特性から、膨大なデータ量を安価に高い耐久性を要して保存するのに向いています。オブジェクトには、アプリケーションがデータを迅速に検出するための十分な情報があり、構造化されていないデータの保存に適しています。"
+    },
+    {
+      "id": 140,
+      "question_id": 35,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "EBSで利用されている",
+      "message": "EBSはブロック型ストレージです。詳しくはS3の概要を参照してください。"
+    },
+    {
+      "id": 141,
+      "question_id": 35,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "インスタンスストアで利用されている",
+      "message": "インスタンスストアはブロック型ストレージです。詳しくはS3の概要を参照してください。"
+    },
+    {
+      "id": 142,
+      "question_id": 36,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "バージョニングを利用して復元する。",
+      "message": "バージョニングとは、同じバケット内でオブジェクトの複数のバリアントを保持する手段です。バージョニングを使用して、Amazon S3 バケットに格納されたあらゆるオブジェクトのあらゆるバージョンを、格納、取得、復元することができます。"
+    },
+    {
+      "id": 143,
+      "question_id": 36,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "ライフサイクル管理により以前のバージョンに戻ることで復元する",
+      "message": "ライフサイクル管理はデータの移動・削除に利用します。バージョニングが正解です。同じバケット内でオブジェクトの複数のバリアントを保持する手段です。バージョニングを使用して、Amazon S3 バケットに格納されたあらゆるオブジェクトのあらゆるバージョンを、格納、取得、復元することができます。"
+    },
+    {
+      "id": 144,
+      "question_id": 36,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "レプリケーションを利用して復元する",
+      "message": "レプリケーションはRDSなどで利用します。バージョニングが正解です。同じバケット内でオブジェクトの複数のバリアントを保持する手段です。バージョニングを使用して、Amazon S3 バケットに格納されたあらゆるオブジェクトのあらゆるバージョンを、格納、取得、復元することができます。"
+    },
+    {
+      "id": 145,
+      "question_id": 36,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "自動バックアップを利用して復元する",
+      "message": "自動バックアップはRDSなどで利用します。バージョニングが正解です。同じバケット内でオブジェクトの複数のバリアントを保持する手段です。バージョニングを使用して、Amazon S3 バケットに格納されたあらゆるオブジェクトのあらゆるバージョンを、格納、取得、復元することができます。"
+    },
+    {
+      "id": 146,
+      "question_id": 37,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "ライフサイクル管理",
+      "message": "こちらが間違った説明内容であり正解となります。ライフサイクル管理はマネージメントコンソールの「管理」にある機能です。詳しくはS3のプロパティ活用を参照してください。"
+    },
+    {
+      "id": 147,
+      "question_id": 37,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "バージョン管理",
+      "message": "静的ホスティングとオブジェクトレベルのログ管理とバージョン管理はマネージメントコンソールのプロパティにある機能です。"
+    },
+    {
+      "id": 148,
+      "question_id": 37,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "静的ホスティング",
+      "message": "静的ホスティングとオブジェクトレベルのログ管理とバージョン管理はマネージメントコンソールのプロパティにある機能です。"
+    },
+    {
+      "id": 149,
+      "question_id": 37,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "オブジェクトレベルのログ管理",
+      "message": "静的ホスティングとオブジェクトレベルのログ管理とバージョン管理はマネージメントコンソールのプロパティにある機能です。"
+    },
+    {
+      "id": 150,
+      "question_id": 38,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "管理画面にあるホスティングを選択して設定する。",
+      "message": "静的ホスティングはS3マネージメントコンソールのプロパティから設定します。"
+    },
+    {
+      "id": 151,
+      "question_id": 38,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "アクセス権限は初期設定のまま実行することができる。",
+      "message": "間違いです。バケットポリシーを設定して、インターネットからアクセスできるようにする必要があります。"
+    },
+    {
+      "id": 152,
+      "question_id": 38,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "バケットポリシーを設定する必要がある",
+      "message": "バケットポリシーを設定して、インターネットからアクセスできるようにする必要があります"
+    },
+    {
+      "id": 153,
+      "question_id": 38,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "アクセスコントロールリストを設定する必要がある",
+      "message": "間違いです。バケットポリシーを設定して、インターネットからアクセスできるようにする必要があります。"
+    },
+    {
+      "id": 154,
+      "question_id": 39,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "CSE",
+      "message": "CSEはクライアントサイドの暗号化方式の略称ですあり、間違いです。"
+    },
+    {
+      "id": 155,
+      "question_id": 39,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "SSE-S3",
+      "message": "S3ではSSE-S3とSSE-KMSとSSE-Cをサーバーサイド側暗号化方式として利用することができます。"
+    },
+    {
+      "id": 156,
+      "question_id": 39,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "SSE-KMS",
+      "message": "S3ではSSE-S3とSSE-KMSとSSE-Cをサーバーサイド側暗号化方式として利用することができます。"
+    },
+    {
+      "id": 157,
+      "question_id": 39,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "SSE-C ",
+      "message": "S3ではSSE-S3とSSE-KMSとSSE-Cをサーバーサイド側暗号化方式として利用することができます。"
+    },
+    {
+      "id": 158,
+      "question_id": 40,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "CSE",
+      "message": "クライアントサイド暗号化のことです。"
+    },
+    {
+      "id": 159,
+      "question_id": 40,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "SSE-S3",
+      "message": "管理されたキーによる暗号化を行います。"
+    },
+    {
+      "id": 160,
+      "question_id": 40,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "SSE-KMS",
+      "message": "AWS側で提供される暗号キー管理サービスです。"
+    },
+    {
+      "id": 161,
+      "question_id": 40,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "SSE-C",
+      "message": "正しい内容です。ユーザー側で用意した暗号化キーによってサーバーサイド暗号化 を実施するのがSSE-Cです。SSE-Cを使用すると、独自の暗号化キーを設定できます。リクエストの一部として用意された暗号化キーで、Amazon S3 は、ディスクに書き込む際の暗号化とオブジェクトにアクセスする際の復号の両方を管理します。したがって、データの暗号化と復号を実行するコードをユーザー側で管理する必要はありません。必要なことはユーザーが用意する暗号化キーを管理することだけです。"
     }
   ]
 }

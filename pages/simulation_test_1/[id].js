@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout'
 import contents from '../../contents/simulation_test_1.json'
-import { Button, Modal } from 'react-bootstrap'
+import { Button, Modal, ProgressBar } from 'react-bootstrap'
 
 const QuestionDetail = ({ question, answerOptions }) => {
   const router = useRouter()
@@ -107,6 +107,9 @@ const QuestionDetail = ({ question, answerOptions }) => {
 
   return (
     <Layout title={question ? `問題:${question.id}` : ''}>
+      <div className="my-2">
+        <ProgressBar variant="info" now={question.id} max={questionSize()} />
+      </div>
       <h1 className="h1">問題:{question.id}</h1>
       <p>{question.question_text}</p>
       {answerOptions.map((answer) => (

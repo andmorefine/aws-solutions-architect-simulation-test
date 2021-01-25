@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../../../components/layout'
 import contents from '../../../contents/section.json'
+import { VictoryPie } from "victory"
 
 const PageResult = ({ section, question }) => {
   const router = useRouter()
@@ -18,10 +19,27 @@ const PageResult = ({ section, question }) => {
     return <></>
   }
 
+  const questionSize = result.length
+  const answer = result.filter((value) => value.answer).length
+  const notAnswer = questionSize - answer
+  const data = [
+    { x: 1, y: answer, label: "正解" },
+    { x: 2, y: notAnswer, label: "不正解" },
+  ]
+
   return (
     <Layout title={section ? `${section.name}テスト: 結果` : ''}>
       <h1 className="h1">{section.name}テスト: 結果</h1>
       <h6 className="h6">問題の数: {question.length}</h6>
+      <div className="w-100">
+        <VictoryPie
+          width={300}
+          height={200}
+          padding={{top: 0, bottom: 0, left: 70, right: 70 }}
+          colorScale={["cyan", "tomato"]}
+          data={data}
+          animate={{ duration: 200 }} />
+      </div>
       <div className="text-center">
         {result.length > 0 ? (<>
           {result.map((item) => (

@@ -1,7 +1,8 @@
 import Head from 'next/head'
-
 import Header from './header'
 import Footer from './footer'
+import { Container, Nav, Navbar } from 'react-bootstrap';
+
 
 export default function Layout({ children, title }) {
   const defaultTitle = 'AWS試験対策'
@@ -18,11 +19,9 @@ export default function Layout({ children, title }) {
       </Head>
 
       <Header />
-
-      <div className="container-fluid">
+      <Container>
         {children}
-      </div>
-
+      </Container>
       <Footer />
     </>
   )

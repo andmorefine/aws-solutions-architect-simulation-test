@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../../../components/layout'
 import contents from '../../../contents/section.json'
-import { Button, Modal } from 'react-bootstrap'
+import { Button, Modal, ProgressBar } from 'react-bootstrap'
 
 const PageDetail = ({ section, question, questionSize, answerOptions }) => {
   // router
@@ -105,6 +105,9 @@ const PageDetail = ({ section, question, questionSize, answerOptions }) => {
 
   return (
     <Layout title={section ? `${section.name}テスト: 問題${question.page}` : ''}>
+      <div className="my-2">
+        <ProgressBar variant="info" now={question.page} max={questionSize} />
+      </div>
       <h3 className="h3 text-center my-2">{section.name}テスト: 問題{question.page}</h3>
       <p className="lead">{question.question_text}</p>
       {answerOptions.map((answer) => (
