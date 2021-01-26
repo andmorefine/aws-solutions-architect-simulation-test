@@ -28,7 +28,7 @@
       "id": 5,
       "name": "Well Architected Framework",
       "dirname": "wellarchitected",
-      "quiz": true
+      "quiz": false
     },
     {
       "id": 6,
@@ -391,6 +391,166 @@
       "section_id": 4,
       "page": 10,
       "question_text": "次の暗号化方式の中でユーザー側で用意した暗号キーを利用するサーバーサイド暗号化形式を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 41,
+      "section_id": 6,
+      "page": 1,
+      "question_text": "WEBアプリサービスを開発しているC社ではELBを利用して負荷分散を検討しています。アプリの登録ユーザー数は数万人で頻繁に利用されます。正しいELBタイプを選択をしてください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 42,
+      "section_id": 6,
+      "page": 2,
+      "question_text": "ALBの特徴として間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 43,
+      "section_id": 6,
+      "page": 3,
+      "question_text": "NLBの特徴として間違っているものを選択してください",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 44,
+      "section_id": 6,
+      "page": 4,
+      "question_text": "ロードバランシングしたいサーバーとしていくつかの機能別サーバー群を有しています。あなたはソリューションアーキテクトとして機能別にバランシングを実施したいと考えています。選択すべき方式として正しいものはどれですか？",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 45,
+      "section_id": 6,
+      "page": 5,
+      "question_text": "大規模アクセスが予測されるケースについて、次の「ELBタイプと必要な対応」のセットのうち、「適切ではない内容」を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 46,
+      "section_id": 6,
+      "page": 6,
+      "question_text": "次のうちELBの機能と説明が正しい組合せのものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 47,
+      "section_id": 6,
+      "page": 7,
+      "question_text": "スケーリングのタイプと説明の組合せで正しいものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 48,
+      "section_id": 6,
+      "page": 8,
+      "question_text": "既存のEC2インスタンスに対して後からAuto-Scalingを設定する予定です。既存のインスタンスを活かして利用するために、どのターミネーションポリシーを設定するべきでしょうか。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 49,
+      "section_id": 6,
+      "page": 9,
+      "question_text": "Auto-Scalingグループで設定する内容について間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 50,
+      "section_id": 6,
+      "page": 10,
+      "question_text": "Auto-Scalingの設定において正しいものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 51,
+      "section_id": 6,
+      "page": 11,
+      "question_text": "Auto-Scalingのターミネーションポリシーのデフォルト設定の動作について正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 52,
+      "section_id": 6,
+      "page": 12,
+      "question_text": "RDSで選択できないDBソフトウェアは次のうちどれでしょうか",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 53,
+      "section_id": 6,
+      "page": 13,
+      "question_text": "C社では現在PostgreSQLを利用してデータベースを構築しているが、AWSクラウドサービスに移行したいと考えている。\n次に示す既存データベースの要件を踏まえた場合にどのように移行するべきか検討しなさい。\n・PostgreSQL10.6を利用\n・ファイルシステムとの連携が必要\n・CRMとの連携が必要\n・WEBサーバーとの連携が必要",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 54,
+      "section_id": 6,
+      "page": 14,
+      "question_text": "RDSのリードレプリカの構築について間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 55,
+      "section_id": 6,
+      "page": 15,
+      "question_text": "RDSのスナップショットについて間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 56,
+      "section_id": 6,
+      "page": 16,
+      "question_text": "RDSを利用したスケーリングについて正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 57,
+      "section_id": 6,
+      "page": 17,
+      "question_text": "RDSの暗号化対象として間違っている対象を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 58,
+      "section_id": 6,
+      "page": 18,
+      "question_text": "RDSの暗号化方式として利用できないものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 59,
+      "section_id": 6,
+      "page": 19,
+      "question_text": "RDSを利用したフェイルオーバ構成について正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 60,
+      "section_id": 6,
+      "page": 20,
+      "question_text": "RDSを利用するべき判断ポイントとして間違っているものを選択してください。",
       "type": "radio",
       "num_checkboxions": ""
     }
@@ -1683,6 +1843,670 @@
       "correct": true,
       "answer_text": "SSE-C",
       "message": "正しい内容です。ユーザー側で用意した暗号化キーによってサーバーサイド暗号化 を実施するのがSSE-Cです。SSE-Cを使用すると、独自の暗号化キーを設定できます。リクエストの一部として用意された暗号化キーで、Amazon S3 は、ディスクに書き込む際の暗号化とオブジェクトにアクセスする際の復号の両方を管理します。したがって、データの暗号化と復号を実行するコードをユーザー側で管理する必要はありません。必要なことはユーザーが用意する暗号化キーを管理することだけです。"
+    },
+    {
+      "id": 162,
+      "question_id": 41,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "ELB",
+      "message": "ELBは全体の総称であり、ELBのタイプを選択してください。通常のWEBアプリケーションにはALBを利用します。"
+    },
+    {
+      "id": 163,
+      "question_id": 41,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "CLB",
+      "message": "CLBはクラシックタイプのELBで現在は使用することは稀であり、ALBなどを利用することが推奨されています。"
+    },
+    {
+      "id": 164,
+      "question_id": 41,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "ALB",
+      "message": "アプリケーションのユーザー数が1万人ということは、一般的にいうと小規模のアプリケーションとなります。ユーザー数が1万人いることは、実際の同時アクセスユーザーはかなり少ないと考えてください。したがって、通常のWEBアプリケーション向けにALBを利用することが正解となります。Aplication Load Balancerは、開放型システム間相互接続 (OSI) モデルの第 7 層であるアプリケーションレイヤーで機能します。"
+    },
+    {
+      "id": 165,
+      "question_id": 41,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "NLB",
+      "message": "アプリケーションのユーザー数が1万人ということは、一般的にいうと小規模のアプリケーションとなります。ユーザー数が1万人いることは、実際の同時アクセスユーザーはかなり少ないと考えてください。NLBは高性能なネットワークが必要であり、非常に高いネットワーク性能が必要で、かつ複雑な設定をする際に利用します。通常のWEBアプリケーションにはALBを利用します。"
+    },
+    {
+      "id": 166,
+      "question_id": 42,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "URLのパスに基いてルーティングが可能なパスベースルーティングが可能",
+      "message": "ALBの特徴の1つで正しい内容です。"
+    },
+    {
+      "id": 167,
+      "question_id": 42,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "ターゲットグループでのヘルスチェックが可能",
+      "message": "ALBの特徴の1つで正しい内容です。"
+    },
+    {
+      "id": 168,
+      "question_id": 42,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "ポートを利用するコンテナをロードバランシング可能",
+      "message": "ALBの特徴の1つで正しい内容です。"
+    },
+    {
+      "id": 169,
+      "question_id": 42,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "HTTP/HTTPSとTCP/SSLプロトコルのL4とL7に対応",
+      "message": "こちらが間違った説明内容であり正解となります。HTTP/HTTPSとTCP/SSLプロトコルのL4とL7に対応しているのはCLBの特徴です。Application Load Balancerは、開放型システム間相互接続 (OSI) モデルの第 7 層であるアプリケーションレイヤーで機能します。"
+    },
+    {
+      "id": 170,
+      "question_id": 43,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "L4ロードバランサである",
+      "message": "正しい内容です。"
+    },
+    {
+      "id": 171,
+      "question_id": 43,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "毎秒数千万のリクエストに対応できる性能がある。",
+      "message": "こちらが間違った説明内容であり正解となります。毎秒数百万のリクエストに対応できる性能があります。"
+    },
+    {
+      "id": 172,
+      "question_id": 43,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "フォールトトレラント機能を有したコネクション処理を有する",
+      "message": "正しい内容です。数カ月から数年のオープンなコネクションを処理できます。"
+    },
+    {
+      "id": 173,
+      "question_id": 43,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "コンテナ化されたアプリケーションをサポートしている",
+      "message": "正しい内容です。NLBはDockerなどを利用したコンテナ化されたアプリケーションをサポートしています。"
+    },
+    {
+      "id": 174,
+      "question_id": 44,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "ALBを利用したパスルーティングを実施する",
+      "message": "正しい内容です。ALBを利用したパスルーティングを実施することで、機能別にグループ分けしたEC2インスタンス群において、グループ毎にそれぞれバランシングを実施することが可能です。"
+    },
+    {
+      "id": 175,
+      "question_id": 44,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "CLBを利用してサブドメインを設定する",
+      "message": "CLBでサブドメイン構成により実現可能ですが、設定がめんどうになるため通常はALBを利用することが求められます。ALBを利用したパスルーティングを実施することで、機能別にグループわけしたEC2インスタンス群において、グループ毎にそれぞれバランシングを実施することが可能です。"
+    },
+    {
+      "id": 176,
+      "question_id": 44,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "ALBを利用してサブドメインを設定する",
+      "message": "ALBを利用したパスルーティングを実施することで、機能別にグループわけしたEC2インスタンス群において、グループ毎にそれぞれバランシングを実施することが可能です。"
+    },
+    {
+      "id": 177,
+      "question_id": 44,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "NLBの基本機能を利用する",
+      "message": "NLBの基本機能での設定はないため、間違いです。ALBを利用したパスルーティングを実施することで、機能別にグループわけしたEC2インスタンス群において、グループ毎にそれぞれバランシングを実施することが可能です。"
+    },
+    {
+      "id": 178,
+      "question_id": 45,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "NLBを利用しており、Pre-warming申請を実施する",
+      "message": "こちらが間違った説明内容であり正解となります。NLBはPre-warming申請は必要ありません"
+    },
+    {
+      "id": 179,
+      "question_id": 45,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "ALBを利用しており、Pre-warming申請を実施する",
+      "message": "正しい内容です。ALBを利用している場合は、Pre-warming申請が必要です。"
+    },
+    {
+      "id": 180,
+      "question_id": 45,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "CLBを利用しており、Pre-warming申請を実施する",
+      "message": "正しい内容です。CLBを利用している場合は、Pre-warming申請が必要です。"
+    },
+    {
+      "id": 181,
+      "question_id": 45,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "どのELBタイプであって必ずしもPre-warming申請が必要となるわけではない。",
+      "message": "正しい内容です。NLBはPre-warming申請を必要としません。"
+    },
+    {
+      "id": 182,
+      "question_id": 46,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "Connection Drainingは配下のEC2の負荷に応じて、複数のAZに跨るEC2インスタンスの負荷分散を行う機能である。",
+      "message": "負荷分散機能の説明です。負荷分散とは配下のEC2の負荷に応じて、複数のAZに跨るEC2インスタンスの負荷分散を行う機能です。"
+    },
+    {
+      "id": 183,
+      "question_id": 46,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "SSL Terminationはインスタンスが登録解除されるか異常が発生した場合に、そのバックエンドインスタンスへの新規リクエスト送信を中止する機能である",
+      "message": "Connection Drainingはインスタンスが登録解除されるか異常が発生した場合に、そのバックエンドインスタンスへの新規リクエスト送信を中止する機能です。"
+    },
+    {
+      "id": 184,
+      "question_id": 46,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "スティッキーセッションはセッション中に、同じユーザから来たリクエストを全て、同じEC2インスタンスに送信する機能である。",
+      "message": "正しい内容です。スティッキーセッションはセッション中に、同じユーザから来たリクエストを全て、同じEC2インスタンスに送信する機能です。"
+    },
+    {
+      "id": 185,
+      "question_id": 46,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ELB分散はEC2インスタンスの正常／異常を確認し、利用するEC2の振り分けを行う機能である",
+      "message": "ヘルスチェックのことです。ヘルスチェックはELB分散はEC2インスタンスの正常／異常を確認し、利用するEC2の振り分けを行う機能です。"
+    },
+    {
+      "id": 186,
+      "question_id": 47,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "スケールアップは処理する機器／サーバー台数を増加すること",
+      "message": "スケールアップはメモリやCPUの追加・増強することです。"
+    },
+    {
+      "id": 187,
+      "question_id": 47,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "スケールダウンはメモリやCPUを削減すること",
+      "message": "正しい内容です。スケールダウンはメモリやCPUを削減することです。"
+    },
+    {
+      "id": 188,
+      "question_id": 47,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "スケールアウトは処理する機器／サーバー台数を低減すること",
+      "message": "スケールアウトは処理する機器／サーバー台数を増加することです。"
+    },
+    {
+      "id": 189,
+      "question_id": 47,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "スケールインはメモリやCPUの追加・増強すること",
+      "message": "スケールインは処理する機器／サーバー台数を低減することです。"
+    },
+    {
+      "id": 190,
+      "question_id": 48,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "OldestInstance",
+      "message": "既存のEC2インスタンスから削除されることになります。"
+    },
+    {
+      "id": 191,
+      "question_id": 48,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "NewestInstance",
+      "message": "正しい内容です。AutoScalingによって新しく設置されたインスタンスから削除される設定です。"
+    },
+    {
+      "id": 192,
+      "question_id": 48,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "OldestLaunchConfiguration",
+      "message": "もっとも古い起動設定から設定されたインスタンスから削除するため、既存のEC2インスタンスから削除される可能性が高いです。"
+    },
+    {
+      "id": 193,
+      "question_id": 48,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "デフォルト",
+      "message": "デフォルトを設定するとOldestLaunchConfigurationから実行されます。"
+    },
+    {
+      "id": 194,
+      "question_id": 49,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "起動インスタンスの最小数と最大数を設定する",
+      "message": "正しい内容です。Auto-Scalingグループにおいて起動インスタンスの最小数と最大数を設定することができます。"
+    },
+    {
+      "id": 195,
+      "question_id": 49,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "起動台数をAZ間でバランシングする",
+      "message": "正しい内容です。Auto-Scalingグループにおいて起動台数をAZ間でバランシングすることができます。"
+    },
+    {
+      "id": 196,
+      "question_id": 49,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "インスタンスタイプを選択する",
+      "message": "こちらが間違った説明内容であり正解となります。インスタンスタイプの選択は起動設定で実施する内容です。"
+    },
+    {
+      "id": 197,
+      "question_id": 49,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "AZ障害時には、障害が発生していないAZにおいて、その分のインスタンスを起動するように構成する。",
+      "message": "正しい内容です。AZ障害時には、障害が発生していないAZにおいて、その分のインスタンスを起動するように構成することができます。"
+    },
+    {
+      "id": 198,
+      "question_id": 50,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "ELBのターゲットグループを設定すれば、ELB構成を利用できる",
+      "message": "正しい内容です。ELBのターゲットグループを設定すれば、ELB構成を利用してELBのヘルスチェックによりAutoScalingを実行することができます。"
+    },
+    {
+      "id": 199,
+      "question_id": 50,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "ELBのターゲットグループを設定するだけでELB内にあるEC2インスタンスをスケーリングすることができる。",
+      "message": "ELB内にもともと起動していたEC2インスタンスにAuto-Scalingグループをアタッチする必要があります。"
+    },
+    {
+      "id": 200,
+      "question_id": 50,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "ELBのAuto-Scalingも実施してくれる。",
+      "message": "ELBのスケーリングはAWS側が対応しており、AutoScalingを設定する必要はありません。"
+    },
+    {
+      "id": 201,
+      "question_id": 50,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ELBとセットで利用する必要がある。",
+      "message": "必ずしもELBを設置する必要はありません。"
+    },
+    {
+      "id": 202,
+      "question_id": 51,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "最も古い起動設定のインスタンスから削除する。",
+      "message": "正しい内容です。OldestLaunchConfigurationからClosestToNextInstanceHourの順番に適用していきます。"
+    },
+    {
+      "id": 203,
+      "question_id": 51,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "次の課金が始まるタイミングが最も近いインスタンスから終了する。",
+      "message": "OldestLaunchConfigurationからClosestToNextInstanceHourの順番に適用していきます。"
+    },
+    {
+      "id": 204,
+      "question_id": 51,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "最も古いインスタンスや新しい起動時刻のインスタンスなどの順から終了する。",
+      "message": "OldestLaunchConfigurationからClosestToNextInstanceHourの順番に適用していきます。"
+    },
+    {
+      "id": 205,
+      "question_id": 51,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ランダムに終了する。",
+      "message": "最初の段階でランダムに終了することはありません。OldestLaunchConfigurationからClosestToNextInstanceHourの順番に適用していきます。まだ削除しきれないインスタンスが残っていた場合は、その後はランダムに終了します。"
+    },
+    {
+      "id": 206,
+      "question_id": 52,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "MySQL",
+      "message": "正しい内容です。Amazon RDS は、メモリ、パフォーマンス、または I/O に最適化されたいくつかのデータベースインスタンスタイプで利用でき、Amazon Aurora、PostgreSQL、MySQL、MariaDB、Oracle データベース、SQL Server など、6 つの使い慣れたデータベースエンジンから選択できます。"
+    },
+    {
+      "id": 207,
+      "question_id": 52,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "Oracle",
+      "message": "正しい内容です。Amazon RDS は、メモリ、パフォーマンス、または I/O に最適化されたいくつかのデータベースインスタンスタイプで利用でき、Amazon Aurora、PostgreSQL、MySQL、MariaDB、Oracle データベース、SQL Server など、6 つの使い慣れたデータベースエンジンから選択できます。"
+    },
+    {
+      "id": 208,
+      "question_id": 52,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "DB2 ",
+      "message": "間違いです。RDSではDB2は利用できません。Amazon RDS は、メモリ、パフォーマンス、または I/O に最適化されたいくつかのデータベースインスタンスタイプで利用でき、Amazon Aurora、PostgreSQL、MySQL、MariaDB、Oracle データベース、SQL Server など、6 つの使い慣れたデータベースエンジンから選択できます。"
+    },
+    {
+      "id": 209,
+      "question_id": 52,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "Aurora",
+      "message": "正しい内容です。Amazon RDS は、メモリ、パフォーマンス、または I/O に最適化されたいくつかのデータベースインスタンスタイプで利用でき、Amazon Aurora、PostgreSQL、MySQL、MariaDB、Oracle データベース、SQL Server など、6 つの使い慣れたデータベースエンジンから選択できます。"
+    },
+    {
+      "id": 210,
+      "question_id": 52,
+      "option_id": 5,
+      "correct": false,
+      "answer_text": "PostgreSQL",
+      "message": "正しい内容です。Amazon RDS は、メモリ、パフォーマンス、または I/O に最適化されたいくつかのデータベースインスタンスタイプで利用でき、Amazon Aurora、PostgreSQL、MySQL、MariaDB、Oracle データベース、SQL Server など、6 つの使い慣れたデータベースエンジンから選択できます。"
+    },
+    {
+      "id": 211,
+      "question_id": 52,
+      "option_id": 6,
+      "correct": false,
+      "answer_text": "MariaDB",
+      "message": "正しい内容です。Amazon RDS は、メモリ、パフォーマンス、または I/O に最適化されたいくつかのデータベースインスタンスタイプで利用でき、Amazon Aurora、PostgreSQL、MySQL、MariaDB、Oracle データベース、SQL Server など、6 つの使い慣れたデータベースエンジンから選択できます。"
+    },
+    {
+      "id": 212,
+      "question_id": 53,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "RDSはPostgreSQL 10.6はサポートされていないため、EC2インスタンスにマイグレーションする必要がある。",
+      "message": "2018年12月よりRDSはPostgreSQL 10.6のサポートを開始しました。"
+    },
+    {
+      "id": 213,
+      "question_id": 53,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "CRMとの連携のためにはオンプレミスデータベースを利用するべきである。",
+      "message": "AWSでデータベースを構築してもCRMと連携することは可能です。"
+    },
+    {
+      "id": 214,
+      "question_id": 53,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "RDSはファイルシステムとの連携はサポートされていないため、EC2インスタンスを利用する必要がある。",
+      "message": "正しい内容です。RDSにはファイルシステムとの連携はサポートされていないため、EC2インスタンスを利用してデータベースを構成する必要があります。"
+    },
+    {
+      "id": 215,
+      "question_id": 53,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "RDSはWEBサーバーとの連携はサポートされていないため、EC2インスタンスを利用する必要がある。",
+      "message": "RDSはEC2インスタンスとの連携やオンプレミスサーバーとの連携も構築可能です。"
+    },
+    {
+      "id": 216,
+      "question_id": 54,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "読取を分散させるためにはリードレプリカはRDSと同じAZに構築する必要がある。",
+      "message": "こちらが間違った説明内容であり正解となります。リードレプリカは別AZに構築が可能です。"
+    },
+    {
+      "id": 217,
+      "question_id": 54,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "マスタスレーブ構成のスレーブに対するリードレプリカも構築することができる",
+      "message": "正しい内容です。マスタスレーブ構成のスレーブに対するリードレプリカも構築することができます。"
+    },
+    {
+      "id": 218,
+      "question_id": 54,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "リードレプリカは非同期レプリケーションを実施している。",
+      "message": "正しい内容です。リードレプリカは非同期レプリケーションを実施しています。"
+    },
+    {
+      "id": 219,
+      "question_id": 54,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "リードレプリカを利用することで読込処理の負荷を下げることが出来る",
+      "message": "正しい内容です。リードレプリカを利用することでマスターの読込処理負荷を下げることが出来ます。"
+    },
+    {
+      "id": 220,
+      "question_id": 55,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "スナップショットはRDSと同じAZ内に保存される",
+      "message": "こちらが間違った説明内容であり正解となります。RDSのスナップショットはリージョン内のS3に保存されます。"
+    },
+    {
+      "id": 221,
+      "question_id": 55,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "スナップショットによるDB復元では別のデータベースを構築することになる。",
+      "message": "正しい内容です。スナップショットによるDB復元では別のデータベースを改めて構築することになります。"
+    },
+    {
+      "id": 222,
+      "question_id": 55,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "スナップショットは自動で取得する設定が出来る",
+      "message": "正しい内容です。スナップショットは自動で取得するようにスケジューリングすることができます。"
+    },
+    {
+      "id": 223,
+      "question_id": 55,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "スナップショットは手動で取得することができる",
+      "message": "正しい内容です。スナップショットはマネージメントコンソールからの操作で取得することが可能です。"
+    },
+    {
+      "id": 224,
+      "question_id": 56,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "RDSはAuto-Scalingによるパフォーマンス拡張ができる",
+      "message": "RDSはAuto-Scalingによるパフォーマンス拡張は実施出来ません。代わりにデータベース容量を拡張することができます。"
+    },
+    {
+      "id": 225,
+      "question_id": 56,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "途中でインスタンスタイプを縮小することができる",
+      "message": "正しい内容です。途中でインスタンスタイプを縮小するなど変更することが可能です。"
+    },
+    {
+      "id": 226,
+      "question_id": 56,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "ストレージサイズを増減することができる",
+      "message": "ストレージサイズを増加することはできますが、減少させることはできません。"
+    },
+    {
+      "id": 227,
+      "question_id": 56,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "RDSライトレプリカを作成できる。",
+      "message": "RDSはライトレプリカではなくリードレプリカを作成できます。リードレプリカによって、データベース (DB) インスタンスのパフォーマンスと耐久性が向上します。"
+    },
+    {
+      "id": 228,
+      "question_id": 57,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "インスタンス",
+      "message": "Amazon RDS リソースの暗号化オプションを有効化すると、AES-256 暗号化アルゴリズムにより DB インスタンス、 自動バックアップ、 リードレプリカ 、スナップショット、 ログを暗号化します。"
+    },
+    {
+      "id": 229,
+      "question_id": 57,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "自動バックアップ",
+      "message": "Amazon RDS リソースの暗号化オプションを有効化すると、AES-256 暗号化アルゴリズムにより DB インスタンス、 自動バックアップ、 リードレプリカ 、スナップショット、 ログを暗号化します。"
+    },
+    {
+      "id": 230,
+      "question_id": 57,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "スナップショット",
+      "message": "Amazon RDS リソースの暗号化オプションを有効化すると、AES-256 暗号化アルゴリズムにより DB インスタンス、 自動バックアップ、 リードレプリカ 、スナップショット、 ログを暗号化します。"
+    },
+    {
+      "id": 231,
+      "question_id": 57,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "オブジェクト",
+      "message": "こちらが間違った説明内容であり正解となります。RDSはそもそもオブジェクトは利用していないため、暗号化対象として不適切です。Amazon RDS リソースの暗号化オプションを有効化すると、AES-256 暗号化アルゴリズムにより DB インスタンス、 自動バックアップ、 リードレプリカ 、スナップショット、 ログを暗号化します。"
+    },
+    {
+      "id": 232,
+      "question_id": 57,
+      "option_id": 5,
+      "correct": false,
+      "answer_text": "リードレプリカ",
+      "message": "Amazon RDS リソースの暗号化オプションを有効化すると、AES-256 暗号化アルゴリズムにより DB インスタンス、 自動バックアップ、 リードレプリカ 、スナップショット、 ログを暗号化します。"
+    },
+    {
+      "id": 233,
+      "question_id": 58,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "AES-256",
+      "message": "正しい内容です。AES-256 はRDSの標準的な暗号化方式です。"
+    },
+    {
+      "id": 234,
+      "question_id": 58,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "SSE",
+      "message": "正しい内容です。サーバーサイド暗号化を利用しています。"
+    },
+    {
+      "id": 235,
+      "question_id": 58,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "AWS KMS ",
+      "message": "正しい内容です。KMSを利用した暗号化も利用できます。"
+    },
+    {
+      "id": 236,
+      "question_id": 58,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "CSE",
+      "message": "誤った回答です。クライアントサイドの暗号化方式はRDSには利用できません。"
+    },
+    {
+      "id": 237,
+      "question_id": 59,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "最初の構築時点で必ずマルチAZ構成を選択する必要がある。",
+      "message": "構築後にマルチAZ構成へと変更が可能です。"
+    },
+    {
+      "id": 238,
+      "question_id": 59,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "フェイルオーバは手動で実施することができる",
+      "message": "正しい内容です。フェイルオーバは手動で実施することができます。"
+    },
+    {
+      "id": 239,
+      "question_id": 59,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "別リージョンのスレーブを構築することが可能である",
+      "message": "同じリージョンの別AZにスレーブを構築します。"
+    },
+    {
+      "id": 240,
+      "question_id": 59,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "リードレプリカを15台まで併用することができる",
+      "message": "リードレプリカは15台まで利用できるのはAuroraだけです。通常のRDSはリードレプリカ5台までとなります。"
+    },
+    {
+      "id": 241,
+      "question_id": 60,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "マネージド型サービスを利用してコストを削減したい。",
+      "message": "正しい内容です。マネージド型サービスを利用してコストを削減したい場合にRDSは最適です。"
+    },
+    {
+      "id": 242,
+      "question_id": 60,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "パッチ当てなどを社内でコントロールする必要がある",
+      "message": "こちらが間違った説明内容であり正解となります。パッチ当てはAWS側が実施する管理内容です。パッチ当てなどを社内でコントロールする必要がある場合はEC2インスタンスをデータベースとして利用する必要があります。"
+    },
+    {
+      "id": 243,
+      "question_id": 60,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "DBソフトウェアのバージョンは必ずしも最新でなくても良い。",
+      "message": "正しい内容です。RDSは最新のソフトウェアバージョンが即時に適用されないため、最新にこだわる場合は不適切です。"
+    },
+    {
+      "id": 244,
+      "question_id": 60,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "冗長性の高いDB構成を実現したい",
+      "message": "正しい内容です。RDSはマルチAZをワンクリックで設定できるため、冗長性の高いDB構成を容易に実現することができます。"
     }
   ]
 }

@@ -3,13 +3,15 @@ import Link from 'next/link'
 import Layout from '../../components/layout'
 import contents from '../../contents/section.json'
 
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap'
+import { VictoryChart, VictoryArea, VictoryPolarAxis, VictoryTheme, VictoryLabel } from "victory"
 
 const SectionIndex = ({ posts }) => {
   const [result, setResult] = useState([])
   useEffect(() => {
-    const resultNum = posts.map((section) => (
+    const resultNum = posts.filter((value) => value.quiz).map((section) => (
       {
+        section_name: section.name,
         section_dirname: section.dirname,
         result_num: (typeof localStorage !== 'undefined' && localStorage.getItem(`section_${section.dirname}`)) ? JSON.parse(localStorage.getItem(`section_${section.dirname}`)).filter((value) => value.answer).length : 0,
         question_num: contents.question.filter((value) => value.section_id === section.id).length,
@@ -20,12 +22,24 @@ const SectionIndex = ({ posts }) => {
 
   if (!result) return <></>
 
+  // const data = [
+  //   {x: "cats", y: 1, label: "moge"},
+  //   {x: "dogs", y: 2, label: "moge"},
+  //   {x: "birds", y: 3, label: "moge"},
+  //   {x: "fish", y: 2, label: "moge"},
+  //   {x: "frogs", y: 1, label: "moge"}
+  // ]
+  const data = result.filter((v) => v.question_num > 0).map((value) => ({
+    x: value.section_name,
+    y: value.result_num,
+  }))
+
   return (
     <Layout title="練習問題: セクション一覧">
       <h1 className="h1">練習問題: セクション一覧</h1>
       <Container>
         <Row>
-          {posts.map((section) => (
+          {posts.filter((value) => value.quiz).map((section) => (
             <Col sm={4} md={3} key={section.id}>
               <Card>
                 <Link href={`/section/${section.dirname}`} key={section.id}>
@@ -44,6 +58,22 @@ const SectionIndex = ({ posts }) => {
               </Card>
             </Col>
           ))}
+        </Row>
+        <Row>
+          <VictoryChart
+            polar
+            theme={VictoryTheme.material}
+            animate={{ duration: 1000, onLoad: { duration: 500 } }}
+            width={300}
+            height={200}
+            padding={{top: 0, bottom: 0, left: 70, right: 70 }}>
+            <VictoryArea
+              data={data}
+              domain={{y: [0, 10]}}
+              style={{ data: { fill: "tomato", width: 30 } }}
+              labelPlacement="vertical" />
+            <VictoryPolarAxis labelPlacement="vertical" />
+          </VictoryChart>
         </Row>
       </Container>
     </Layout>
