@@ -22,16 +22,9 @@ const SectionIndex = ({ posts }) => {
 
   if (!result) return <></>
 
-  // const data = [
-  //   {x: "cats", y: 1, label: "moge"},
-  //   {x: "dogs", y: 2, label: "moge"},
-  //   {x: "birds", y: 3, label: "moge"},
-  //   {x: "fish", y: 2, label: "moge"},
-  //   {x: "frogs", y: 1, label: "moge"}
-  // ]
   const data = result.filter((v) => v.question_num > 0).map((value) => ({
     x: value.section_name,
-    y: value.result_num,
+    y: (value.result_num / value.question_num) * 100,
   }))
 
   return (
@@ -69,7 +62,7 @@ const SectionIndex = ({ posts }) => {
             padding={{top: 0, bottom: 0, left: 70, right: 70 }}>
             <VictoryArea
               data={data}
-              domain={{y: [0, 10]}}
+              domain={{y: [0, 100]}}
               style={{ data: { fill: "tomato", width: 30 } }}
               labelPlacement="vertical" />
             <VictoryPolarAxis labelPlacement="vertical" />

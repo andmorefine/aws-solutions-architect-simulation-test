@@ -553,6 +553,46 @@
       "question_text": "RDSを利用するべき判断ポイントとして間違っているものを選択してください。",
       "type": "radio",
       "num_checkboxions": ""
+    },
+    {
+      "id": 61,
+      "section_id": 7,
+      "page": 1,
+      "question_text": "プライベートホストゾーンの説明として間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 62,
+      "section_id": 7,
+      "page": 2,
+      "question_text": "パブリックホストゾーンについて間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 63,
+      "section_id": 7,
+      "page": 3,
+      "question_text": "A社はグローバルにサービス展開されるアプリケーションをAWSで構築しようとしています。ユーザーにとって最も応答速度が速いサーバーからアクセスできるようにルーティングを実行する非機能要件を満たすためには、次のどのルーティングポリシーを設定するべきでしょうか？",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 64,
+      "section_id": 7,
+      "page": 4,
+      "question_text": "エイリアス（ALIAS）レコードについて間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 65,
+      "section_id": 7,
+      "page": 5,
+      "question_text": "Route53を利用して複雑なルーティングポリシーを設定する際の機能と使い方の組合せとして正しいものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
     }
   ],
   "answer_options": [
@@ -2507,6 +2547,158 @@
       "correct": false,
       "answer_text": "冗長性の高いDB構成を実現したい",
       "message": "正しい内容です。RDSはマルチAZをワンクリックで設定できるため、冗長性の高いDB構成を容易に実現することができます。"
+    },
+    {
+      "id": 245,
+      "question_id": 61,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "VPCに閉じたプライベートネットワーク内のDNSドメインのレコードを管理するコンテナ",
+      "message": "正しい内容です。プライベートホストゾーンはVPCに閉じたプライベートネットワーク内のDNSドメインのレコードを管理するコンテナです。"
+    },
+    {
+      "id": 246,
+      "question_id": 61,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "1つのプライベートホストゾーンで1つのVPCに対応させる必要がある",
+      "message": "こちらが間違った説明内容であり正解となります。1つのプライベートホストゾーンで複数VPCに対応可能です。プライベートホストゾーンは、Amazon VPC サービスで作成する 1 つ以上の VPC 内のドメインとそのサブドメインに対する DNS クエリに Amazon Route 53 が応答する方法に関する情報を保持するコンテナです。"
+    },
+    {
+      "id": 247,
+      "question_id": 61,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "VPC内のDNSドメインに対して、どのようにトラフィックをルーティングするかを定義する",
+      "message": "正しい内容です。VPC内のDNSドメインに対して、どのようにトラフィックをルーティングするかを定義することができます。"
+    },
+    {
+      "id": 248,
+      "question_id": 61,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "プライベートサブネット内にあるドメインをルーティングすることが可能",
+      "message": "正しい内容です。プライベートサブネット内にあるドメインをルーティングすることが可能です。プライベートホストゾーンは、Amazon VPC サービスで作成する 1 つ以上の VPC 内のドメインとそのサブドメインに対する DNS クエリに Amazon Route 53 が応答する方法に関する情報を保持するコンテナです。"
+    },
+    {
+      "id": 249,
+      "question_id": 62,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "インターネット上に公開されたDNSドメインレコードを管理するコンテナ",
+      "message": "正しい内容です。パブリックホストゾーンは、あるドメイン、たとえば example.com とそのサブドメイン (acme.example.com や zenith.example.com) のトラフィックをインターネットまたは特定のドメインでルーティングする方法についての情報を保持するコンテナです。"
+    },
+    {
+      "id": 250,
+      "question_id": 62,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "インターネットのDNSドメインに対するトラフィックのルーティング方法を定義する",
+      "message": "正しい内容です。パブリックホストゾーンは、あるドメイン、たとえば example.com とそのサブドメイン (acme.example.com や zenith.example.com) のトラフィックをインターネットまたは特定のドメインでルーティングする方法についての情報を保持するコンテナです。"
+    },
+    {
+      "id": 251,
+      "question_id": 62,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "VPCが相互アクセス可能であれば複数リージョンのVPCでも、同じホストゾーンを利用可能である",
+      "message": "こちらが間違った説明内容であり正解となります。これはプライベートホストゾーンの説明です。"
+    },
+    {
+      "id": 252,
+      "question_id": 63,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "フェイルオーバールーティング",
+      "message": "レイテンシールーティングが正解です。レイテンシールーティングポリシーは複数の AWS リージョンにリソースがあり、レイテンシーの最も小さいリージョンにトラフィックをルーティングする場合に使用します。"
+    },
+    {
+      "id": 253,
+      "question_id": 63,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "位置情報ルーティング",
+      "message": "レイテンシールーティングが正解です。レイテンシールーティングポリシーは複数の AWS リージョンにリソースがあり、レイテンシーの最も小さいリージョンにトラフィックをルーティングする場合に使用します。"
+    },
+    {
+      "id": 254,
+      "question_id": 63,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "レイテンシールーティング",
+      "message": "正しい内容です。レイテンシールーティングポリシーは複数の AWS リージョンにリソースがあり、レイテンシーの最も小さいリージョンにトラフィックをルーティングする場合に使用します。"
+    },
+    {
+      "id": 255,
+      "question_id": 63,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "マルチバリュールーティング",
+      "message": "レイテンシールーティングが正解です。レイテンシールーティングポリシーは複数の AWS リージョンにリソースがあり、レイテンシーの最も小さいリージョンにトラフィックをルーティングする場合に使用します。"
+    },
+    {
+      "id": 256,
+      "question_id": 64,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "DNSで独自のドメインレコードを設定する際に用いる汎用レコードである",
+      "message": "こちらが間違った説明内容であり正解となります。AWS独自のレコード方式です。Amazon Route 53 エイリアスレコードでは Route 53 独自の DNS 拡張機能が提供されます。エイリアスレコードを使用すると、選択した AWS リソース (CloudFront ディストリビューションや Amazon S3 バケットなど) にトラフィックをルーティングできます。また、エイリアスレコードにより、ホストゾーン内のあるレコードから別のレコードにトラフィックをルーティングできます。"
+    },
+    {
+      "id": 257,
+      "question_id": 64,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "DNSクエリにAWSサービスのエンドポイントのIPアドレスを返答する",
+      "message": "正しい内容です。Amazon Route 53 エイリアスレコードでは Route 53 独自の DNS 拡張機能が提供されます。エイリアスレコードを使用すると、選択した AWS リソース (CloudFront ディストリビューションや Amazon S3 バケットなど) にトラフィックをルーティングできます。その際にはDNSクエリにAWSサービスのエンドポイントのIPアドレスを返答します。"
+    },
+    {
+      "id": 258,
+      "question_id": 64,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "DNSクエリに対するレスポンスが高速となる",
+      "message": "正しい内容です。DNSクエリに対するレスポンスが高速となり、エイリアスレコードで高速に名前解決ができます。"
+    },
+    {
+      "id": 259,
+      "question_id": 64,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ALIASレコードに対するクエリは無料で利用できる",
+      "message": "正しい内容です。ALIASレコードに対するクエリは無料で利用できます。"
+    },
+    {
+      "id": 260,
+      "question_id": 65,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "ALIASレコードを駆使して、フローを作成することでルーティングポリシーを設定する",
+      "message": "間違いです。複雑なルーティングはALIASレコードではなくトラフィックフローを用いて、順序を設定することでルーティングポリシーを設定します。"
+    },
+    {
+      "id": 261,
+      "question_id": 65,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "トラフィックフローを用いて、順序を設定することでルーティングポリシーを設定する",
+      "message": "正しい内容です。複雑なルーティングはトラフィックフローを用いて、順序を設定することでルーティングポリシーを設定します。"
+    },
+    {
+      "id": 262,
+      "question_id": 65,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "ALIASレコードをトラフィックフローでフロー化することでルーティングポリシーを設定する",
+      "message": "間違いです。複雑なルーティングはトラフィックフローを用いて、順序を設定することでルーティングポリシーを設定します。"
+    },
+    {
+      "id": 263,
+      "question_id": 65,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "JSON／YAMLファイルにルーティングを設定することでルーティングポリシーを設定する",
+      "message": "間違いです。複雑なルーティングはトラフィックフローを用いて、順序を設定することでルーティングポリシーを設定します。"
     }
   ]
 }
