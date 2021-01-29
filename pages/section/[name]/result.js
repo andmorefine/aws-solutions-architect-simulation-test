@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
 import Layout from '../../../components/layout'
 import contents from '../../../contents/section.json'
 import { VictoryPie } from "victory"
+import { Button } from 'react-bootstrap'
 
 const PageResult = ({ section, question }) => {
   const router = useRouter()
@@ -17,6 +19,10 @@ const PageResult = ({ section, question }) => {
   if (!result) {
     router.push(`/section/${section.dirname}`)
     return <></>
+  }
+
+  const sectionTop = () => {
+    router.push(`/section`)
   }
 
   const questionSize = result.length
@@ -35,7 +41,7 @@ const PageResult = ({ section, question }) => {
         <VictoryPie
           width={300}
           height={200}
-          padding={{top: 0, bottom: 0, left: 70, right: 70 }}
+          padding={{top: 0, bottom: 0, left: 90, right: 90 }}
           colorScale={["cyan", "tomato"]}
           data={data}
           animate={{ duration: 200 }} />
@@ -43,11 +49,22 @@ const PageResult = ({ section, question }) => {
       <div className="text-center">
         {result.length > 0 ? (<>
           {result.map((item) => (
-            <div className="py-1" key={item.page}>
-              {item.page}: {item.answer ? '正解' : '不正解'}
+            <div className={'my-3 py-3 result-link ' + (item.answer ? 'result-correct' : 'result-incorrect')} key={item.page}>
+              <Link href={`/section/${section.dirname}/${item.page}`}>
+                <div>
+                  {item.answer ? '正解' : '不正解'}
+                  <hr />
+                  {item.page}: {question[item.page - 1].question_text}
+                </div>
+              </Link>
             </div>
           ))}
         </>) : (<></>)}
+      </div>
+      <div className="text-center my-3">
+        <Button variant="info" onClick={sectionTop}>
+          セクショントップに戻る
+        </Button>
       </div>
     </Layout>
   )

@@ -28,3 +28,22 @@
 hr {
   margin: 0.6rem 0;
 }
+
+.result-link {
+  cursor: pointer;
+  &:hover, &:active {
+    opacity: .8;
+  }
+}
+
+.result-correct {
+  color: #004085;
+  background-color: #cce5ff;
+  border-color: #b8daff;
+}
+
+.result-incorrect {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}

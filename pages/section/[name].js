@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import Layout from '../../components/layout'
 import contents from '../../contents/section.json'
@@ -6,6 +7,14 @@ import { Button } from 'react-bootstrap'
 const SectionDetail = ({ section, question }) => {
   // router
   const router = useRouter()
+
+  const [result, setResult] = useState([])
+  useEffect(() => {
+    const storageName = `section_${section.dirname}`
+    const storageObject = typeof localStorage !== 'undefined' ? JSON.parse(localStorage.getItem(storageName)) : []
+    setResult(storageObject)
+  }, [])
+
   const testStart = () => {
     const storageName = `section_${section.dirname}`
     localStorage.removeItem(storageName)
@@ -17,6 +26,10 @@ const SectionDetail = ({ section, question }) => {
     router.push(`/section/${section.dirname}/1`)
   }
 
+  const testResult = () => {
+    router.push(`/section/${section.dirname}/result`)
+  }
+
   return (
     <Layout title={section ? `${section.name}` : ''}>
       <h1 className="h1">{section.name}テスト</h1>
@@ -26,6 +39,13 @@ const SectionDetail = ({ section, question }) => {
         <Button variant="primary" onClick={testStart}>
           小テストを開始する
         </Button>
+      </div>
+      <div className="text-center my-3">
+        {!!result ? (<>
+          <Button variant="secondary" onClick={testResult}>
+            結果を確認する
+          </Button>
+        </>) : (<></>)}
       </div>
     </Layout>
   )
