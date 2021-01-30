@@ -793,6 +793,86 @@
       "question_text": "CloudFrontの配信設定について間違っている内容を選択してください。",
       "type": "radio",
       "num_checkboxions": ""
+    },
+    {
+      "id": 91,
+      "section_id": 10,
+      "page": 1,
+      "question_text": "SQSについて間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 92,
+      "section_id": 10,
+      "page": 2,
+      "question_text": "SQSの特徴として正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 93,
+      "section_id": 10,
+      "page": 3,
+      "question_text": "SNSの特徴として正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 94,
+      "section_id": 10,
+      "page": 4,
+      "question_text": "コンポーネント間の通信を非同期でコンシューマー側の状況に応じて通信を実現したい場合に、どのサービスを選択するべきでしょうか。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 95,
+      "section_id": 10,
+      "page": 5,
+      "question_text": "SESの特徴として間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 96,
+      "section_id": 10,
+      "page": 6,
+      "question_text": "API Gatewayについて間違っている説明を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 97,
+      "section_id": 10,
+      "page": 7,
+      "question_text": "Lambdaの特徴について正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 98,
+      "section_id": 10,
+      "page": 8,
+      "question_text": "LambdaのPushモデルとPullモデルについて正しい組合せを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 99,
+      "section_id": 10,
+      "page": 9,
+      "question_text": "Lambdaのパーミッションについて正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 100,
+      "section_id": 10,
+      "page": 10,
+      "question_text": "Lambdaの機能について間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
     }
   ],
   "answer_options": [
@@ -3691,6 +3771,326 @@
       "correct": false,
       "answer_text": "RTMP DistributionではS3バケットをオリジン設定できる",
       "message": "正しい内容です。RTMP DistributionではS3バケットをオリジン設定することが可能です。"
+    },
+    {
+      "id": 363,
+      "question_id": 91,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "ショートポーリングはキューが空の場合でも即時にリターンする",
+      "message": "正しい内容です。ショートポーリングはキューが空の場合でも即時にリターンするキュー設定です。"
+    },
+    {
+      "id": 364,
+      "question_id": 91,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "ロングポーリングはキューが空の場合はタイムアウトまで待つ",
+      "message": "正しい内容です。ロングポーリングはキューが空の場合はタイムアウトまで待つキュー設定です。"
+    },
+    {
+      "id": 365,
+      "question_id": 91,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "デッドレターキューは残ったメッセージを定期的に削除する",
+      "message": "こちらが間違った説明内容であり正解となります。ずっと残ったメッセージを別キューに移動し、正常に処理できなかったメッセージを隔離します。"
+    },
+    {
+      "id": 366,
+      "question_id": 91,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "可視性タイムアウト（Visibility Timeout）は指定した処理サーバーに対してはメッセージ内容を指定期間見えなくする",
+      "message": "正しい内容です。可視性タイムアウト（Visibility Timeout）は指定した処理サーバーに対してはメッセージ内容を指定期間見えなくすることで、キューの重複処理を防ぐことができます。"
+    },
+    {
+      "id": 367,
+      "question_id": 92,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "デフォルトではキューが入った順番通りに処理される",
+      "message": "間違いです。順番通りに処理されるキューはFIFOキューです。デフォルトの標準キューは「順番通りに処理」と「1回だけのメッセージング」を“なるべく”実施する処理をします。"
+    },
+    {
+      "id": 368,
+      "question_id": 92,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "FIFOがデフォルトで設定されている",
+      "message": "間違いです。FIFOキューはデフォルトではありません。デフォルトの標準キューは「順番通りに処理」と「1回だけのメッセージング」を“なるべく”実施する処理をします。"
+    },
+    {
+      "id": 369,
+      "question_id": 92,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "メッセージの最大サイズは256KBで、それ以上は設定できない。",
+      "message": "間違いです。Extended Client Libraryを利用すると、2GBまでのメッセージの送受信 が可能です。"
+    },
+    {
+      "id": 370,
+      "question_id": 92,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "メッセージ保持期限は最大で14日に設定可能",
+      "message": "正しい内容です。削除されないメッセージはデフォルトで4日間保持します。保持期間は60秒から14日の間で変更可能です。"
+    },
+    {
+      "id": 371,
+      "question_id": 93,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "SNSはフルマネージド型のPull型通知サービスである",
+      "message": "間違いです。SNSはフルマネージド型のプッシュ型通知サービスです。"
+    },
+    {
+      "id": 372,
+      "question_id": 93,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "SNSは送信側がトピックを作成して受信側をポリシー指定することで制御された非同期通信を実現する",
+      "message": "正しい内容です。SNSは送信側がトピックを作成して受信側をポリシー指定することで制御された非同期通信を実現することができます。"
+    },
+    {
+      "id": 373,
+      "question_id": 93,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "SNSのメッセージは永続性がある",
+      "message": "間違いです。SQSのメッセージには永続性があります。"
+    },
+    {
+      "id": 374,
+      "question_id": 93,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "SNSはプロデューサーがサブスクライブする必要がある",
+      "message": "間違いです。SNSはコンシューマーがサブスクライブする必要があります。"
+    },
+    {
+      "id": 375,
+      "question_id": 94,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "SNS",
+      "message": "間違いです。この場合はSQSを利用してコンシューマー側から状況に応じてメッセージを取得する方式にする必要があります。"
+    },
+    {
+      "id": 376,
+      "question_id": 94,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "SQS",
+      "message": "正しい内容です。この場合はSQSを利用してコンシューマー側から状況に応じてメッセージを取得する方式にする必要があります。"
+    },
+    {
+      "id": 377,
+      "question_id": 94,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "SES",
+      "message": "間違いです。この場合はSQSを利用してコンシューマー側から状況に応じてメッセージを取得する方式にする必要があります。"
+    },
+    {
+      "id": 378,
+      "question_id": 94,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "SWF",
+      "message": "間違いです。Amazon Simple Workflow Service (SWF) は、分散するアプリケーションコンポーネントにまたがる作業のコーディネートを目的とするウェブサービスです。"
+    },
+    {
+      "id": 379,
+      "question_id": 95,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "SESはフルマネージド型のコスト効率に優れたEメールサービス",
+      "message": "正しい内容です。Amazon Simple Email Service (Amazon SES) は、デジタルマーケティング担当者やアプリケーション開発者がマーケティング、通知、トランザクションに関するEメールを送信できるように設計された、クラウドベースのEメール送信サービスです。"
+    },
+    {
+      "id": 380,
+      "question_id": 95,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "Eメールメッセージを利用するためには必ずSESを利用する必要がある",
+      "message": "こちらが間違った説明内容であり正解となります。SNSでもメール通信は可能です。"
+    },
+    {
+      "id": 381,
+      "question_id": 95,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "受信したメールをトリガーにS3やLambdaなどを起動可能である。",
+      "message": "正しい内容です。Amazon SES を使用して E メールを受信すると、E メールプログラムで受信を確認できます。受信 E メールは、Amazon S3 バケットに自動的に配信できます。メッセージの受信時に AWS Lambda を使用してカスタムコードを実行することや、特定のキーワードを含むメッセージの受信時に Amazon SNS を使用して通知を配信することができます。"
+    },
+    {
+      "id": 382,
+      "question_id": 95,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ドメインやメール登録を事前申請する必要がある",
+      "message": "正しい内容です。Amazon SES ではE メールアドレスまたはドメインを検証して、それを所有していることを確認し、他のユーザーに使用されないようにする必要があります。"
+    },
+    {
+      "id": 383,
+      "question_id": 96,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "最大数1000個のAPI同時呼び出し・受付が可能である",
+      "message": "こちらが間違った説明内容であり正解となります。最大数十万個のAPI同時呼び出し・受付が可能です。"
+    },
+    {
+      "id": 384,
+      "question_id": 96,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "EC2／Lambda／任意のウェブアプリケーションのワークロード処理を実行する",
+      "message": "正しい内容です。EC2／Lambda／任意のウェブアプリケーションのワークロード処理を実行することができます。"
+    },
+    {
+      "id": 385,
+      "question_id": 96,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "APIを生成・管理することができる",
+      "message": "正しい内容です。Amazon API Gateway は、数回クリックするだけで、簡単に API の作成、配布、保守、監視、保護が行えるフルマネージドなサービスです。"
+    },
+    {
+      "id": 386,
+      "question_id": 96,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "WEBSocketを利用した相互通信が可能である",
+      "message": "正しい内容です。WebSocket API は、API Gateway コンソールで、AWS CLI create-api コマンドを使用するか、AWS SDK で CreateApi コマンドを使用して作成できます。"
+    },
+    {
+      "id": 387,
+      "question_id": 97,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "秒単位でコード実行時間に対しての課金される",
+      "message": "間違いです。100ミリ秒単位でコード実行時間に対しての課金されます。"
+    },
+    {
+      "id": 388,
+      "question_id": 97,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "Node.js/Javaでコーディングする必要がある",
+      "message": "間違いです。pythonなどもサポートしており、かつ多言語のRuntimeも利用可能です。"
+    },
+    {
+      "id": 389,
+      "question_id": 97,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "SDKを利用してアプリケーションに組み込むことができる",
+      "message": "正しい内容です。SDKを利用してアプリケーションに組み込むことができます。"
+    },
+    {
+      "id": 390,
+      "question_id": 97,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ELBによる冗長構成を実施する必要がある",
+      "message": "間違いです。AWS Lambda はレプリケーションと冗長性を使用して、サービス本体およびサービスによって実行される Lambda 関数の両方で高い可用性を実現するように設計されています。メンテナンス時間や定期的なダウンタイムはありません。"
+    },
+    {
+      "id": 391,
+      "question_id": 98,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "PullモデルではS3／Cognito／SNSなどのAWSサービスとカスタムイベントが直接実行する",
+      "message": "間違いです。Pushモデルの説明です。"
+    },
+    {
+      "id": 392,
+      "question_id": 98,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "PushモデルはDynamoDBとKinesisと連携ができる",
+      "message": "間違いです。Pullモデルの説明です。"
+    },
+    {
+      "id": 393,
+      "question_id": 98,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "Pushモデルは3回リトライを実行する",
+      "message": "正しい内容です。Pushモデルは3回リトライを実行することができます。"
+    },
+    {
+      "id": 394,
+      "question_id": 98,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "Pushモデルは実行順序通りに実施される。",
+      "message": "間違いです。Pushモデルは順不同で実行されます。"
+    },
+    {
+      "id": 395,
+      "question_id": 99,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "Execution RoleによりLambdaがその他リソースで実行できる内容を設定する",
+      "message": "正しい内容です。Execution RoleによりLambdaがS3やDynamoDBなどのその他AWSリソースで実行できる許可設定を行います。"
+    },
+    {
+      "id": 396,
+      "question_id": 99,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "Execution RoleではセキュリティグループによってAWSのリソースへのアクセスが許可される",
+      "message": "間違いです。IAMロールによってAWSリソースへのアクセスが許可されます。"
+    },
+    {
+      "id": 397,
+      "question_id": 99,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "InvocationによってLambdaファンクションの実行範囲が決定される。",
+      "message": "間違いです。Lambdaファンクションをどのリソースが実行できるかを決定します。"
+    },
+    {
+      "id": 398,
+      "question_id": 99,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "クロスアカウントアクセスは実施できない。",
+      "message": "間違いです。クロスアカウントアクセスの設定も可能です。"
+    },
+    {
+      "id": 399,
+      "question_id": 100,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "ブループリントを利用してファンクションコードを自動生成できる",
+      "message": "こちらが間違った説明内容であり正解となります。ブループリントはユースケースごとのサンプルコードを参照することができます。"
+    },
+    {
+      "id": 400,
+      "question_id": 100,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "スケジュール機能を利用して特定時刻をトリガーにしてLambdaファンクションを実行する",
+      "message": "正しい内容です。5分、15分、1時間、1日、cron 形式によりスケジュールを設定し、実行することができます。"
+    },
+    {
+      "id": 401,
+      "question_id": 100,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "バージョニング機能でファンクションの一時点を記録管理することが可能",
+      "message": "正しい内容です。バージョニング機能を利用すると、コードをアップロードする度に、そのコードベースに対して番号が振られ、コードの世代管理ができるようになります。"
+    },
+    {
+      "id": 402,
+      "question_id": 100,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "ENIを通してVPC内のリソースにアクセスできる。",
+      "message": "正しい内容です。Lambda関数はENIを通してVPC内のリソースにアクセスすることができます。"
     }
   ]
 }

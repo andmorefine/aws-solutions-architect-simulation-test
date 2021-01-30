@@ -36,12 +36,13 @@ const PageResult = ({ section, question }) => {
   return (
     <Layout title={section ? `${section.name}テスト: 結果` : ''}>
       <h1 className="h1">{section.name}テスト: 結果</h1>
-      <h6 className="h6">問題の数: {question.length}</h6>
+      <h6 className="h6">問題: {question.length}</h6>
+      <h6 className="h6">不正解：{notAnswer} / 正解：{answer}</h6>
       <div className="w-100">
         <VictoryPie
           width={300}
           height={200}
-          padding={{top: 0, bottom: 0, left: 90, right: 90 }}
+          padding={{top: 0, bottom: 0, left: 100, right: 100 }}
           colorScale={["cyan", "tomato"]}
           data={data}
           animate={{ duration: 200 }} />
