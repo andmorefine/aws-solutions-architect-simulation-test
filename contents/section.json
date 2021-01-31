@@ -873,6 +873,150 @@
       "question_text": "Lambdaの機能について間違っている内容を選択してください。",
       "type": "radio",
       "num_checkboxions": ""
+    },
+    {
+      "id": 101,
+      "section_id": 11,
+      "page": 1,
+      "question_text": "Codeシリーズの組合せとして正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 102,
+      "section_id": 11,
+      "page": 2,
+      "question_text": "Elastic Beanstalkの説明で正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 103,
+      "section_id": 11,
+      "page": 3,
+      "question_text": "Elastic Beanstalkの説明として間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 104,
+      "section_id": 11,
+      "page": 4,
+      "question_text": "OpsWorksで実施できる利用方法として正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 105,
+      "section_id": 11,
+      "page": 5,
+      "question_text": "Amazonのコンテナサービスの説明として正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 106,
+      "section_id": 11,
+      "page": 6,
+      "question_text": "CodePipelineの特徴として間違えている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 107,
+      "section_id": 11,
+      "page": 7,
+      "question_text": "Amazon ECSについて間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 108,
+      "section_id": 11,
+      "page": 8,
+      "question_text": "CloudFormationのテンプレート内の記述要素について間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 109,
+      "section_id": 12,
+      "page": 1,
+      "question_text": "AWS KMSについて間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 110,
+      "section_id": 12,
+      "page": 2,
+      "question_text": "AWS KMSの利用できる対象サービスとして間違っているサービスを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 111,
+      "section_id": 12,
+      "page": 3,
+      "question_text": "監視やモニタリングに利用するAWSサービスについての正しい説明を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 112,
+      "section_id": 12,
+      "page": 4,
+      "question_text": "AWS Directory Serviceについて間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 113,
+      "section_id": 12,
+      "page": 5,
+      "question_text": "Trusted Adviserを利用することで可能なサービスを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 114,
+      "section_id": 12,
+      "page": 6,
+      "question_text": "AWSのコスト試算について正しい内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 115,
+      "section_id": 12,
+      "page": 7,
+      "question_text": "次のうちCloudWatchについて間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 116,
+      "section_id": 12,
+      "page": 8,
+      "question_text": "AWS Systems Managerについて間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 117,
+      "section_id": 12,
+      "page": 9,
+      "question_text": "AWS GuardDutyについて間違っているものを選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
+    },
+    {
+      "id": 118,
+      "section_id": 12,
+      "page": 10,
+      "question_text": "次のAWSサービスとその説明の組み合わせで間違っている内容を選択してください。",
+      "type": "radio",
+      "num_checkboxions": ""
     }
   ],
   "answer_options": [
@@ -4091,6 +4235,598 @@
       "correct": false,
       "answer_text": "ENIを通してVPC内のリソースにアクセスできる。",
       "message": "正しい内容です。Lambda関数はENIを通してVPC内のリソースにアクセスすることができます。"
+    },
+    {
+      "id": 403,
+      "question_id": 101,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "CodeCommitはそのコミット実施時にユニットテストを実施する。",
+      "message": "間違いです。AWS CodeBuild がビルド実行時にソースコードをコンパイルし、ユニットテストを実行して、すぐにデプロイできるアーティファクトを生成します。"
+    },
+    {
+      "id": 404,
+      "question_id": 101,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "CodeDeployはコーディングされた内容を展開する。",
+      "message": "正しい内容です。AWS CodeDeploy は、Amazon EC2、AWS Fargate、AWS Lambda、オンプレミスで実行されるサーバーなど、さまざまなコンピューティングサービスへのソフトウェアのデプロイを自動化する、フルマネージド型のサービスです。"
+    },
+    {
+      "id": 405,
+      "question_id": 101,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "CodePipelineは各種Codeセットをテンプレート化して展開する。",
+      "message": "間違いです。CodePipelineはCodeサービスを連結して処理するパイプラインを構成して管理することが出来る完全マネージド型の継続的デリバリーサービスです。各種Codeセットをテンプレート化して展開するのはCloudFormationです。"
+    },
+    {
+      "id": 406,
+      "question_id": 101,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "CodeBuildはコーディングされた内容をリポジトリにホストする。",
+      "message": "間違いです。CodeCommitの内容です。AWS CodeCommit は、Git ベースのリポジトリをセキュアにホストする完全マネージド型のソース管理サービスです。"
+    },
+    {
+      "id": 407,
+      "question_id": 102,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "ウェブアプリケーションやサービスを使い慣れたサーバーでデプロイおよびスケーリングするためのサービス",
+      "message": "正しい内容です。Elastic Beanstalk では、アプリケーションを実行しているインフラストラクチャについて学習することなく、AWS クラウドでアプリケーションをすばやくデプロイし、管理できます。Elastic Beanstalk は、選択肢を狭めたり制御を制限したりすることなく、管理の複雑さを軽減します。アプリケーションをアップロードするだけで、Elastic Beanstalk が自動的に容量のプロビジョニング、負荷分散、拡張、およびアプリケーションの状態のモニタリングといった詳細を処理します。"
+    },
+    {
+      "id": 408,
+      "question_id": 102,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "クラウド環境内のすべてのインフラストラクチャリソースを記述してプロビジョニングするためテンプレート化されたプロビジョニングサービス",
+      "message": "これはCloudFormationのことです。"
+    },
+    {
+      "id": 409,
+      "question_id": 102,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "ChefやPuppet によるマネージド型インスタンスのサーバーの設定、デプロイ、管理を自動化できるようになる設定管理サービス",
+      "message": "これはOpsWorksのことです。"
+    },
+    {
+      "id": 410,
+      "question_id": 102,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "インフラの設定自動化に適したサービス",
+      "message": "間違いです。WEBアプリケーションの展開に適しています。インフラの設定自動化にはCloudFormationなどを利用します。"
+    },
+    {
+      "id": 411,
+      "question_id": 103,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "アプリケーションはBeanstalkによって展開されるWEBアプリケーションの単位である",
+      "message": "こちらが間違った説明内容であり正解となります。アプリケーションはトップレベルの論理単位でバージョンや環境設定が含まれている入れ物のことです。"
+    },
+    {
+      "id": 412,
+      "question_id": 103,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "バージョンはデプロイ可能なコードである",
+      "message": "正しい内容です。バージョンはデプロイ可能なコードです。"
+    },
+    {
+      "id": 413,
+      "question_id": 103,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "環境は各環境(ウェブサーバ／ワーカー) に応じて構築されるインフラ環境である",
+      "message": "正しい内容です。環境は各環境(ウェブサーバ／ワーカー) に応じて構築されるインフラ環境のことです。"
+    },
+    {
+      "id": 414,
+      "question_id": 103,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "環境設定はその環境に関連するリソースの動作を定義する設定パラメータである",
+      "message": "正しい内容です。環境設定はその環境に関連するリソースの動作を定義する設定パラメータです。"
+    },
+    {
+      "id": 415,
+      "question_id": 104,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "OpsWorksスタックはChefを利用せずにオリジナルのAWSテンプレートによるインフラ設定を行う",
+      "message": "間違いです。Chefのレシピを利用します。"
+    },
+    {
+      "id": 416,
+      "question_id": 104,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "OpsWorks for Chef AutomationはChefとPuppetを利用したインフラ設定を行う",
+      "message": "間違いです。Puppetは利用できません。"
+    },
+    {
+      "id": 417,
+      "question_id": 104,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "OpsWorks for Puppet EnterpriseはPuppetのみしか利用できない。",
+      "message": "正しい内容です。OpsWorks for Puppet EnterpriseはPuppetのみしか利用できず、Chefは利用できません。"
+    },
+    {
+      "id": 418,
+      "question_id": 105,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "Amazon ECRはコンテナイメージを格納する",
+      "message": "正しい内容です。Amazon ECRはコンテナイメージを格納します。"
+    },
+    {
+      "id": 419,
+      "question_id": 105,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "Amazon ECSはコンテナイメージを格納する",
+      "message": "間違いです。Amazon ECRがコンテナイメージを格納します。"
+    },
+    {
+      "id": 420,
+      "question_id": 105,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "Amazon EKSはコンテナイメージを格納する",
+      "message": "間違いです。Amazon ECRがコンテナイメージを格納します。"
+    },
+    {
+      "id": 421,
+      "question_id": 105,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "AWS Fargateはコンテナイメージを格納する",
+      "message": "間違いです。Amazon ECRがコンテナイメージを格納します。"
+    },
+    {
+      "id": 422,
+      "question_id": 106,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "CodeCommitとCodeBuildとCodeDeployに特化した専用パイプラインサービス",
+      "message": "こちらが間違った説明内容であり正解となります。CodePipelineはECSなどにも利用できます。"
+    },
+    {
+      "id": 423,
+      "question_id": 106,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "ソースリポジトリからビルド、テスト、デプロイまで完全自動化されたリリースプロセスを確立する",
+      "message": "正しい内容です。CodePipelineはソースリポジトリからビルド、テスト、デプロイまで完全自動化されたリリースプロセスを確立します。"
+    },
+    {
+      "id": 424,
+      "question_id": 106,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "デプロイ前の承認プロセスを定義することができる",
+      "message": "正しい内容です。CodePipelineはデプロイ前の承認プロセスを定義することで、人的なフローを構築することもできます。"
+    },
+    {
+      "id": 425,
+      "question_id": 106,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "CI／CDプロセスを支援する",
+      "message": "正しい内容です。CodePipelineはCI／CDプロセスを支援する典型的なサービスの1つです。"
+    },
+    {
+      "id": 426,
+      "question_id": 107,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "DockerFileに環境イメージを設定することでインフラ設定をコード化する",
+      "message": "正しい内容です。DockerFileに環境イメージを設定することでインフラ設定をコード化するのがECSの役割です。"
+    },
+    {
+      "id": 427,
+      "question_id": 107,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "DockerイメージをECRから取得して展開する",
+      "message": "正しい内容です。Amazon ECRはDockerイメージをリポジトリするサービスです。Amazon EKSとAmazon ECSはECRから取得してDockerアプリケーションを展開します。"
+    },
+    {
+      "id": 428,
+      "question_id": 107,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "Dockerコンテナによる環境構築のテンプレート化を実現する",
+      "message": "正しい内容です。Dockerコンテナによる環境構築のテンプレート化を実現します。"
+    },
+    {
+      "id": 429,
+      "question_id": 107,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "DockerイメージはYAMLとJSONを利用して設定する",
+      "message": "こちらが間違った説明内容であり正解となります。Amazon ECSはDockerfileを使ってDockerイメージを作成します。"
+    },
+    {
+      "id": 430,
+      "question_id": 108,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "Propertiesにリソースなどの詳細な設定内容を記述する",
+      "message": "正しい内容です。Propertiesに設定内容を記述します。"
+    },
+    {
+      "id": 431,
+      "question_id": 108,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "Parametersにリソースなどの詳細な設定内容を記述する",
+      "message": "間違いです。Parametersにはパラメーター設定を定義して関数で呼び出す際に利用します。"
+    },
+    {
+      "id": 432,
+      "question_id": 108,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "Resourceにリソースを記述する",
+      "message": "正しい内容です。Resourceに展開したい対象となるAWSリソースを指定します。"
+    },
+    {
+      "id": 433,
+      "question_id": 108,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "Descriptionを記述する必要はない",
+      "message": "正しい内容です。Descriptionはテンプレートの説明を記述するセクションであり、利用は必須ではありません。"
+    },
+    {
+      "id": 434,
+      "question_id": 109,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "データキーとマスターキーによる暗号化を実施する",
+      "message": "正しい内容です。データキーとマスターキーを組合せて暗号化を実施する仕組みです。"
+    },
+    {
+      "id": 435,
+      "question_id": 109,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "RDSやS3などのデータベース／ストレージサービスにおける暗号化に活用できる",
+      "message": "正しい内容です。RDSやS3などのデータベース／ストレージサービスにおける暗号化に活用できます。"
+    },
+    {
+      "id": 436,
+      "question_id": 109,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "カスタマーマスターキー（CMK）を利用してデータを暗号化及び復号したりデータキーを暗号化する",
+      "message": "こちらが間違った説明内容であり正解となります。マスターキーはデータキーを暗号化及び復号を実施します。KMS で保護されたデータの暗号化キーを使用してアプリケーション内でローカルにデータを暗号化することができます。"
+    },
+    {
+      "id": 437,
+      "question_id": 109,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "アプリ／ユーザーはデータキーを利用してデータを暗号化する",
+      "message": "正しい内容です。AWS KMSはデータキーを利用して暗号化します。データキーは、大量のデータや他のデータ暗号化キーといったデータを暗号化するための暗号化キーです。"
+    },
+    {
+      "id": 438,
+      "question_id": 110,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "ElasticTranscoder",
+      "message": "正しい内容です。KMSは利用してElasticTranscoderによる変換データを暗号化することができます。"
+    },
+    {
+      "id": 439,
+      "question_id": 110,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "SNS",
+      "message": "正しい内容です。AWS KMS と共に Amazon SNS を使用する場合は、メッセージデータを暗号化したデータキーも暗号化され、保護対象のデータと共に格納されます。"
+    },
+    {
+      "id": 440,
+      "question_id": 110,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "SWF",
+      "message": "こちらが間違った説明内容であり正解となります。Amazon SWF は、クラウド内の完全マネージド型の状態トラッカー、およびタスクコーディネーターであり、KMSは利用できません。"
+    },
+    {
+      "id": 441,
+      "question_id": 110,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "SQS",
+      "message": "正しい内容です。KMSを利用してキューで SSE を有効にすると、キューのデータを保護できます。"
+    },
+    {
+      "id": 442,
+      "question_id": 111,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "CloudTrailはAWSリソースとAWSで実行するアプリケーションに対して、様々なメトリクスやログを収集・追跡するモニタリングサービスである。",
+      "message": "CloudWatchの内容です。CloudWatchはAWSリソースとAWSで実行するアプリケーションに対して、様々なメトリクスやログを収集・追跡するモニタリングサービスです。"
+    },
+    {
+      "id": 443,
+      "question_id": 111,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "CloudWatchはAWSユーザーの行動ログを取得し、ガバナンス、コンプライアンス、および運用とリスクの監査を行えるように支援する。",
+      "message": "CloudTrailの内容です。CloudTrailはAWSユーザーの行動ログを取得し、ガバナンス、コンプライアンス、および運用とリスクの監査を行えるように支援します。"
+    },
+    {
+      "id": 444,
+      "question_id": 111,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "Amazon InspectorはAWS上での悪意のある操作や不正な動作を継続的にモニタリングする脅威検出サービスである。",
+      "message": "GuardDutyの内容です。GuardDutyはAWS上での悪意のある操作や不正な動作を継続的にモニタリングする脅威検出サービスです。"
+    },
+    {
+      "id": 445,
+      "question_id": 111,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "CloudHSMは不正使用防止策がとられている専用HWモジュール（HSM）により暗号キーを保護するサービスである。",
+      "message": "正しい内容です。CloudHSMは不正使用防止策がとられている専用HWモジュール（HSM）により暗号キーを保護するサービスです。"
+    },
+    {
+      "id": 446,
+      "question_id": 112,
+      "option_id": 1,
+      "correct": true,
+      "answer_text": "MS Active DirectoryをAWSに構築することができる。",
+      "message": "こちらが間違った説明内容であり正解となります。MS Active Directoryではなく、AWS Directory Service for Microsoft Active Directory,によって、MS Active Directoryを構築できるようになりました。"
+    },
+    {
+      "id": 447,
+      "question_id": 112,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "Simple ADによりAWSに新規ディレクトリを構築することができる。",
+      "message": "正しい内容です。Simple ADによりAWSに新規ディレクトリを構築することができます。"
+    },
+    {
+      "id": 448,
+      "question_id": 112,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "AD ConnectorによりActive Directoryと連携することができる。",
+      "message": "正しい内容です。AD Connectorにより既存のActive Directoryと連携することができます。"
+    },
+    {
+      "id": 449,
+      "question_id": 112,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "IAMのユーザー管理と併用できる。",
+      "message": "正しい内容です。IAM認証を利用したユーザー管理と統合して利用されます。"
+    },
+    {
+      "id": 450,
+      "question_id": 112,
+      "option_id": 5,
+      "correct": false,
+      "answer_text": "オンプレミスのアクティブディレクトリと統合することができる。",
+      "message": "正しい内容です。AD ConnectorはAWS Managed Microsoft ADによってオンプレミスのADと連携して、シングルサインインの仕組みを構築することができます。"
+    },
+    {
+      "id": 451,
+      "question_id": 113,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "自動でコスト最適化のための構成案を提示してくれる",
+      "message": "間違いです。Trusted Advisor はあくまでもAWS 環境を最適化することで、コスト削減、パフォーマンスの向上、セキュリティの向上に役立つオンラインリソースです。Trusted Advisor では、AWS ベストプラクティスに従ってリソースをプロビジョニングするのに役立つ、リアルタイムガイダンスを提供しています。構成案を提示してくれるわけではありません。"
+    },
+    {
+      "id": 452,
+      "question_id": 113,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "Trusted Adviserによりコストのモニタリングを実施できる",
+      "message": "間違いです。Trusted Advisor はAWS 環境を最適化することで、コスト削減、パフォーマンスの向上、セキュリティの向上に役立つオンラインリソースです。Trusted Advisor では、AWS ベストプラクティスに従ってリソースをプロビジョニングするのに役立つ、リアルタイムガイダンスを提供しています。"
+    },
+    {
+      "id": 453,
+      "question_id": 113,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "Trusted Adviserによりセキュリティを改善できる",
+      "message": "正しい内容です。Trusted Advisor はAWS 環境を最適化することで、コスト削減、パフォーマンスの向上、セキュリティの向上に役立つオンラインリソースです。Trusted Advisor では、AWS ベストプラクティスに従ってリソースをプロビジョニングするのに役立つ、リアルタイムガイダンスを提供しています。"
+    },
+    {
+      "id": 454,
+      "question_id": 113,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "Trusted Adviserにより不正アクセスの検知ができる",
+      "message": "間違いです。Trusted Advisor はAWS 環境を最適化することで、コスト削減、パフォーマンスの向上、セキュリティの向上に役立つオンラインリソースです。Trusted Advisor では、AWS ベストプラクティスに従ってリソースをプロビジョニングするのに役立つ、リアルタイムガイダンスを提供しています。"
+    },
+    {
+      "id": 455,
+      "question_id": 114,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "簡易コスト計算ツールによってコスト比較ができる。",
+      "message": "間違いです。総所要コスト計算ツール（TCOツール）により他システムとコスト比較ができます。"
+    },
+    {
+      "id": 456,
+      "question_id": 114,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "AWS Pricing Calculatorによってニーズに応じたコスト試算ができる。",
+      "message": "正しい内容です。AWS Pricing Calculatorによってニーズに応じたコスト試算ができます。"
+    },
+    {
+      "id": 457,
+      "question_id": 114,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "簡易コスト計算ツールによって請求情報のアラーム設定が可能である。",
+      "message": "間違いです。アラーム設定にはCloudWatchを利用します。"
+    },
+    {
+      "id": 458,
+      "question_id": 114,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "総所要コスト計算ツールによりニーズに応じたコスト計算ができる。",
+      "message": "間違いです。総所要コスト計算ツール（TCOツール）により、他のシステムとのコスト比較ができます。"
+    },
+    {
+      "id": 459,
+      "question_id": 115,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "AWS上で稼働するシステム監視サービスで、死活監視、性能監視、キャパシティ監視を実施できる",
+      "message": "正しい内容です。CloudWatchはAWS上で稼働するシステム監視サービスで、死活監視、性能監視、キャパシティ監視を実施できます。"
+    },
+    {
+      "id": 460,
+      "question_id": 115,
+      "option_id": 2,
+      "correct": true,
+      "answer_text": "全て無料で利用できる",
+      "message": "こちらが間違った説明内容であり正解となります。有料枠により利用内容を拡充できるオプション設定があります。"
+    },
+    {
+      "id": 461,
+      "question_id": 115,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "EC2上のOS・アプリケーションのログを取得できる",
+      "message": "正しい内容です。VPCフローログやCloudWatchエージェントなどを利用することで、EC2上のOS・アプリケーションのログを取得できます。"
+    },
+    {
+      "id": 462,
+      "question_id": 115,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "AWSリソースに対するイベントをトリガーにアクションを実行できる",
+      "message": "正しい内容です。CloudWatchイベントを利用して、AWSリソースに対するイベントをトリガーにアクションを実行することができます。"
+    },
+    {
+      "id": 463,
+      "question_id": 116,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "EC2などのリソースグループごとに運用データを確認できる",
+      "message": "正しい内容です。AWS Systems Managerを利用すれば、EC2などのリソースグループごとに運用データを確認することができます。"
+    },
+    {
+      "id": 464,
+      "question_id": 116,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "EC2のパッチ、更新、設定変更・削除・停止およびデプロイなどを自動化する",
+      "message": "正しい内容です。AWS Systems Managerを利用すれば、EC2のパッチ、更新、設定変更・削除・停止およびデプロイなどを自動化することができます。"
+    },
+    {
+      "id": 465,
+      "question_id": 116,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "AWSリソースの管理に特化した運用管理に利用する",
+      "message": "こちらが間違った説明内容であり正解となります。AWS Systems ManagerはAWSサーバーとオンプレミスのサーバーとを1つのインターフェイスで管理できることが特徴です。"
+    },
+    {
+      "id": 466,
+      "question_id": 116,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "各リソースグループの最新状態を簡単に可視化できる",
+      "message": "正しい内容です。AWS Systems Managerを利用すれば、各リソースグループの最新状態を簡単に可視化できます。"
+    },
+    {
+      "id": 467,
+      "question_id": 117,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "機械学習を利用した不正検知が可能である",
+      "message": "正しい内容です。Amazon GuardDutyは、AWS CloudTrail、Amazon VPC フローログ、DNS ログを利用して、AWS上の異常な振る舞いを検出するサービスです。 このサービスは、機械学習、異常検出、および統合された脅威インテリジェンスを使用することで、潜在的な脅威を識別し、優先順位を付けます。"
+    },
+    {
+      "id": 468,
+      "question_id": 117,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "VPCフローログを解析できる",
+      "message": "正しい内容です。Amazon GuardDutyは、AWS CloudTrail、Amazon VPC フローログ、DNS ログを利用して、AWS上の異常な振る舞いを検出するサービスです。"
+    },
+    {
+      "id": 469,
+      "question_id": 117,
+      "option_id": 3,
+      "correct": false,
+      "answer_text": "CloudTrailログを解析できる",
+      "message": "正しい内容です。Amazon GuardDutyは、AWS CloudTrail、Amazon VPC フローログ、DNS ログを利用して、AWS上の異常な振る舞いを検出するサービスです。"
+    },
+    {
+      "id": 470,
+      "question_id": 117,
+      "option_id": 4,
+      "correct": true,
+      "answer_text": "怪しいネットワークアクセスを確認して遮断する。",
+      "message": "こちらが間違った説明内容であり正解となります。怪しいネットワークアクセスを確認して遮断するのは間違いです。Amazon GuardDutyは、AWS CloudTrail、Amazon VPC フローログ、DNS ログを利用して、AWS上の異常な振る舞いを検出するサービスです。"
+    },
+    {
+      "id": 471,
+      "question_id": 117,
+      "option_id": 5,
+      "correct": false,
+      "answer_text": "DNSログを解析できる",
+      "message": "正しい内容です。Amazon GuardDutyは、AWS CloudTrail、Amazon VPC フローログ、DNS ログを利用して、AWS上の異常な振る舞いを検出するサービスです。"
+    },
+    {
+      "id": 472,
+      "question_id": 117,
+      "option_id": 6,
+      "correct": false,
+      "answer_text": "IPアドレスやドメインリストを解析できる",
+      "message": "正しい内容です。Amazon GuardDutyは、AWS CloudTrail、Amazon VPC フローログ、DNS ログを利用して、AWS上の異常な振る舞いを検出するサービスです。"
+    },
+    {
+      "id": 473,
+      "question_id": 118,
+      "option_id": 1,
+      "correct": false,
+      "answer_text": "AWS Artifactは世界各地にある監査機関の指定する基準／規制の遵守状況を、検証したコンプライアンスレポートを生成する",
+      "message": "正しい内容です。AWS Artifact Reportsの内容です。"
+    },
+    {
+      "id": 474,
+      "question_id": 118,
+      "option_id": 2,
+      "correct": false,
+      "answer_text": "AWS ArtifactはAWSアカウントとの契約の確認・受諾・管理を実施する。",
+      "message": "正しい内容です。AWS Artifact Agreementsの内容です。"
+    },
+    {
+      "id": 475,
+      "question_id": 118,
+      "option_id": 3,
+      "correct": true,
+      "answer_text": "AWS Service CatalogはCodedeployのテンプレートを利用して、管理されるAWSリソース定義や、これらの利用権限をカタログとして一元管理する機能を提供する",
+      "message": "こちらが間違った説明内容であり正解となります。CodedeployではなくCloudFormationのテンプレートを利用します。"
+    },
+    {
+      "id": 476,
+      "question_id": 118,
+      "option_id": 4,
+      "correct": false,
+      "answer_text": "AWS Configには「構成変更を管理するストリーム」と「履歴管理するヒストリー」と「構成要素を保存するスナップショット」の機能がある",
+      "message": "正しい内容です。AWS Configには「構成変更を管理するストリーム」と「履歴管理するヒストリー」と「構成要素を保存するスナップショット」の機能があります。"
     }
   ]
 }

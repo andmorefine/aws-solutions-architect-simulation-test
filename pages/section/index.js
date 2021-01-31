@@ -59,7 +59,7 @@ const SectionIndex = ({ posts }) => {
             animate={{ duration: 1000, onLoad: { duration: 500 } }}
             width={300}
             height={200}
-            padding={{top: 0, bottom: 0, left: 80, right: 80 }}>
+            padding={{top: 0, bottom: 0, left: 100, right: 100 }}>
             <VictoryArea
               data={data}
               domain={{y: [0, 100]}}
